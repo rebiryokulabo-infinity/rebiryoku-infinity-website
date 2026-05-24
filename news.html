@@ -163,7 +163,7 @@
   <!-- ===== NEWS LIST ===== -->
   <section>
     <div class="section-inner">
-      <!-- ✅ 記事はjs/news-data.jsで管理します。あのファイルを編集してください -->
+      <!-- ✅ 記事はdata/news.jsonで管理します。管理画面: /admin/ -->
       <div id="news-list"></div>
     </div>
   </section>
@@ -216,35 +216,39 @@
 
   <div id="google_translate_element" style="display:none;"></div>
   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-  <script src="js/news-data.js"></script>
   <script src="js/main.js"></script>
   <script>
-    // news-data.js の記事を自動で描画
-    const list = document.getElementById('news-list');
-    if (list && typeof NEWS_POSTS !== 'undefined') {
-      list.innerHTML = NEWS_POSTS.map(post => {
-        const paragraphs = post.body.split('\n\n').map(p => `<p>${p.trim()}</p>`).join('');
-        const img = post.image
-          ? `<img class="news-image" src="${post.image}" alt="${post.title}">`
-          : '';
-        return `
-          <div class="news-full-item fade-in">
-            <div class="news-full-header">
-              <span class="news-full-date">${post.date}</span>
-              <span class="news-category">${post.category}</span>
-            </div>
-            <h2 class="news-full-title">${post.title}</h2>
-            <div class="news-full-body">${paragraphs}${img}</div>
-          </div>`;
-      }).join('');
-      // スクロールアニメを再登録
-      document.querySelectorAll('.fade-in').forEach(el => {
-        const io = new IntersectionObserver(entries => {
-          entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-        }, { threshold: 0.12 });
-        io.observe(el);
-      });
-    }
+    // data/news.json から記事を取得して描画
+    fetch('data/news.json')
+      .then(r => r.json())
+      .then(data => {
+        const posts = data.posts || [];
+        const list = document.getElementById('news-list');
+        if (list && posts.length > 0) {
+          list.innerHTML = posts.map(post => {
+            const paragraphs = post.body.split('\n\n').map(p => `<p>${p.trim()}</p>`).join('');
+            const img = post.image
+              ? `<img class="news-image" src="${post.image}" alt="${post.title}">`
+              : '';
+            return `
+              <div class="news-full-item fade-in">
+                <div class="news-full-header">
+                  <span class="news-full-date">${post.date}</span>
+                  <span class="news-category">${post.category}</span>
+                </div>
+                <h2 class="news-full-title">${post.title}</h2>
+                <div class="news-full-body">${paragraphs}${img}</div>
+              </div>`;
+          }).join('');
+          document.querySelectorAll('.fade-in').forEach(el => {
+            const io = new IntersectionObserver(entries => {
+              entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+            }, { threshold: 0.12 });
+            io.observe(el);
+          });
+        }
+      })
+      .catch(err => console.error('ニュースデータ読み込みエラー:', err));
   </script>
 </body>
 </html>
