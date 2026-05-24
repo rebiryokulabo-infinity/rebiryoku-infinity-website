@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>編集ガイド | Re美力Labo Infinity</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&display=swap');
+
+    :root {
+      --gold: #C9A055;
+      --bg: #0f0f0f;
+      --card: #1a1a1a;
+      --border: rgba(201,160,85,0.25);
+      --cream: #F0E8D5;
+      --muted: #888;
+      --green: #4CAF82;
+      --blue: #6AADCE;
+      --orange: #E8A050;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--cream);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 300;
+      line-height: 1.9;
+      font-size: 15px;
+    }
+
+    header {
+      background: rgba(15,15,15,0.97);
+      border-bottom: 1px solid var(--border);
+      padding: 1.2rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    header h1 {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--gold);
+      letter-spacing: 0.1em;
+    }
+
+    header a {
+      font-size: 0.8rem;
+      color: var(--muted);
+      text-decoration: none;
+      border: 1px solid var(--border);
+      padding: 0.3rem 0.8rem;
+      transition: 0.2s;
+    }
+
+    header a:hover { border-color: var(--gold); color: var(--gold); }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      min-height: calc(100vh - 60px);
+    }
+
+    /* サイドバー */
+    .sidebar {
+      background: #111;
+      border-right: 1px solid var(--border);
+      padding: 2rem 0;
+      position: sticky;
+      top: 60px;
+      height: calc(100vh - 60px);
+      overflow-y: auto;
+    }
+
+    .sidebar-title {
+      font-size: 0.65rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--muted);
+      padding: 0 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 0.55rem 1.5rem;
+      color: #aaa;
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: 0.2s;
+      border-left: 2px solid transparent;
+    }
+
+    .sidebar a:hover,
+    .sidebar a.active {
+      color: var(--gold);
+      border-left-color: var(--gold);
+      background: rgba(201,160,85,0.05);
+    }
+
+    .sidebar-section {
+      margin-top: 1.5rem;
+    }
+
+    /* メインコンテンツ */
+    main {
+      padding: 3rem;
+      max-width: 860px;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: var(--cream);
+      margin-bottom: 0.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    h3 {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--gold);
+      margin: 2.5rem 0 0.75rem;
+    }
+
+    p { margin-bottom: 1rem; color: #c0b8a8; }
+
+    section.guide-section {
+      margin-bottom: 4rem;
+      scroll-margin-top: 80px;
+    }
+
+    /* バッジ */
+    .badge {
+      display: inline-block;
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      padding: 0.2rem 0.6rem;
+      border-radius: 2px;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    .badge-easy   { background: rgba(76,175,130,0.15); color: var(--green); border: 1px solid rgba(76,175,130,0.3); }
+    .badge-medium { background: rgba(106,173,206,0.15); color: var(--blue); border: 1px solid rgba(106,173,206,0.3); }
+    .badge-file   { background: rgba(232,160,80,0.15); color: var(--orange); border: 1px solid rgba(232,160,80,0.3); }
+
+    /* コードブロック風ボックス */
+    .code-box {
+      background: #0a0a0a;
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--gold);
+      padding: 1.25rem 1.5rem;
+      margin: 1rem 0;
+      font-family: 'Courier New', monospace;
+      font-size: 0.82rem;
+      line-height: 2;
+      overflow-x: auto;
+      white-space: pre;
+    }
+
+    .code-box .comment { color: #666; }
+    .code-box .key     { color: var(--gold); }
+    .code-box .value   { color: #98C379; }
+    .code-box .string  { color: #98C379; }
+    .code-box .hl      { background: rgba(201,160,85,0.12); }
+
+    /* ステップボックス */
+    .steps {
+      counter-reset: step;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+
+    .step {
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 1.25rem 1.5rem;
+    }
+
+    .step-num {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      background: var(--gold);
+      color: #000;
+      font-size: 0.8rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .step-body { flex: 1; }
+    .step-body strong { color: var(--cream); }
+
+    /* 情報カード */
+    .info-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 1.25rem 1.5rem;
+      margin: 1rem 0;
+    }
+
+    .info-card.tip  { border-left: 3px solid var(--green); }
+    .info-card.warn { border-left: 3px solid var(--orange); }
+
+    .info-card .label {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    .info-card.tip  .label { color: var(--green); }
+    .info-card.warn .label { color: var(--orange); }
+
+    /* ファイル一覧 */
+    .file-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin: 1rem 0;
+    }
+
+    .file-item {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 1rem;
+      padding: 0.75rem 1rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      align-items: start;
+    }
+
+    .file-name {
+      font-family: monospace;
+      font-size: 0.82rem;
+      color: var(--gold);
+    }
+
+    .file-desc {
+      font-size: 0.82rem;
+      color: #aaa;
+    }
+
+    @media (max-width: 768px) {
+      .layout { grid-template-columns: 1fr; }
+      .sidebar { display: none; }
+      main { padding: 2rem 1.5rem; }
+      .file-item { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>📝 サイト編集ガイド</h1>
+  <a href="index.html">← サイトに戻る</a>
+</header>
+
+<div class="layout">
+
+  <!-- サイドバー -->
+  <nav class="sidebar">
+    <div class="sidebar-section">
+      <div class="sidebar-title">はじめに</div>
+      <a href="#overview">ファイル構成</a>
+      <a href="#editor">テキストエディタ</a>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-title">よくある編集</div>
+      <a href="#news">ニュース記事を追加</a>
+      <a href="#photos">写真を差し替える</a>
+      <a href="#siteinfo">基本情報を変更</a>
+      <a href="#menu">メニュー料金を変更</a>
+      <a href="#text">各ページのテキスト</a>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-title">公開する</div>
+      <a href="#deploy">Netlifyへアップロード</a>
+    </div>
+  </nav>
+
+  <!-- メインコンテンツ -->
+  <main>
+
+    <!-- ===== ファイル構成 ===== -->
+    <section class="guide-section" id="overview">
+      <h2>ファイル構成</h2>
+      <p>websiteフォルダの中身はこのようになっています。</p>
+
+      <div class="file-list">
+        <div class="file-item">
+          <div class="file-name">📄 index.html</div>
+          <div class="file-desc">トップページ</div>
+        </div>
+        <div class="file-item">
+          <div class="file-name">📄 about.html</div>
+          <div class="file-desc">サロン概要ページ</div>
+        </div>
+        <div class="file-item">
+          <div class="file-name">📄 menu.html</div>
+          <div class="file-desc">メニューページ（サロン・サロンカー・スクール）</div>
+        </div>
+        <div class="file-item">
+          <div class="file-name">📄 wellcierge.html</div>
+          <div class="file-desc">ウェルシェルジュ紹介ページ</div>
+        </div>
+        <div class="file-item">
+          <div class="file-name">📄 news.html</div>
+          <div class="file-desc">お知らせ・ブログページ</div>
+        </div>
+        <div class="file-item">
+          <div class="file-name">📄 access.html</div>
+          <div class="file-desc">アクセス・お問い合わせページ</div>
+        </div>
+        <div class="file-item">
+          <div class="file-name">⭐ js/news-data.js</div>
+          <div class="file-desc">【よく使う】ニュース記事・基本情報を管理するファイル</div>
+        </div>
+        <div class="file-item">
+          <div class="file-name">🎨 css/style.css</div>
+          <div class="file-desc">デザイン（通常は触らない）</div>
+        </div>
+        <div class="file-item">
+          <div class="file-name">📁 images/</div>
+          <div class="file-desc">サイト用の写真を入れるフォルダ</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== テキストエディタ ===== -->
+    <section class="guide-section" id="editor">
+      <h2>テキストエディタについて</h2>
+      <p>HTMLファイルを編集するには「テキストエディタ」が必要です。</p>
+
+      <div class="info-card tip">
+        <div class="label">おすすめ（無料）</div>
+        <p style="margin:0;"><strong>Visual Studio Code（VS Code）</strong><br>
+        <span style="color:#888; font-size:0.85rem;">Windowsで使いやすく、日本語対応。カラーで見やすく表示されます。<br>
+        ダウンロード：code.visualstudio.com</span></p>
+      </div>
+
+      <div class="info-card tip">
+        <div class="label">一番簡単な方法</div>
+        <p style="margin:0;"><strong>メモ帳でも編集できます</strong><br>
+        <span style="color:#888; font-size:0.85rem;">ファイルを右クリック →「プログラムから開く」→「メモ帳」を選択</span></p>
+      </div>
+    </section>
+
+    <!-- ===== ニュース記事を追加 ===== -->
+    <section class="guide-section" id="news">
+      <h2>ニュース記事を追加する</h2>
+      <span class="badge badge-easy">⭐ 一番簡単</span>
+
+      <p><strong>js/news-data.js</strong> を編集するだけで、記事を追加・削除できます。</p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <strong>js/news-data.js</strong> をテキストエディタで開く
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <strong>「↓↓↓ 新しい記事はここに追加」</strong>と書いてある行のすぐ下に、<br>
+            以下のブロックをコピーして貼り付ける
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            date・category・title・body を書き換えて保存する
+          </div>
+        </div>
+      </div>
+
+      <p>コピーするテンプレート：</p>
+      <div class="code-box"><span class="hl">  {
+    date: "2026.05.01",                    ← 日付（年.月.日）
+    category: "お知らせ",                  ← カテゴリ
+    title: "タイトルをここに書く",          ← 記事タイトル
+    image: "",                             ← 画像なしは "" のまま
+    body: `本文をここに書きます。
+
+段落を分けたい場合は
+1行空けてください。`
+  },</span></div>
+
+      <div class="info-card tip">
+        <div class="label">カテゴリの選択肢</div>
+        <p style="margin:0; font-size:0.85rem; color:#aaa;">
+          "お知らせ" ／ "サロンカー" ／ "スクール" ／ "コラム" ／ "キャンペーン"
+        </p>
+      </div>
+
+      <h3>画像付きの記事にしたい場合</h3>
+      <p>写真を <strong>images/</strong> フォルダに入れてから、imageに名前を書きます。</p>
+      <div class="code-box">    image: <span class="value">"images/my-photo.jpg"</span>,</div>
+
+      <div class="info-card warn">
+        <div class="label">注意</div>
+        <p style="margin:0; font-size:0.85rem; color:#aaa;">
+          記事と記事の間には必ず <strong>カンマ（,）</strong>が必要です。<br>
+          最後の記事だけカンマなしでもOKです。
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== 写真を差し替える ===== -->
+    <section class="guide-section" id="photos">
+      <h2>写真を差し替える</h2>
+      <span class="badge badge-medium">ファイルを置き換えるだけ</span>
+
+      <h3>方法①：同じファイル名で上書きする（一番簡単）</h3>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            変えたい写真と<strong>同じファイル名</strong>で、新しい写真を用意する<br>
+            <span style="color:#888; font-size:0.85rem;">例：サロンカー.jpg という写真を変えたい場合、新しい写真を「サロンカー.jpg」にリネーム</span>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            古いファイルに上書きコピーする<br>
+            <span style="color:#888; font-size:0.85rem;">移動サロンカーフォルダ内の古いファイルに上書き</span>
+          </div>
+        </div>
+      </div>
+
+      <h3>方法②：新しい写真を追加して、HTMLのパスを変える</h3>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">新しい写真を <strong>website/images/</strong> フォルダに入れる</div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            対象のHTMLファイルを開き、<strong>Ctrl+F</strong> で古い画像名を検索<br>
+            <span style="color:#888; font-size:0.85rem;">例：「サロンカー.jpg」で検索</span>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <code style="color:var(--orange)">src="古いファイル名"</code> を
+            <code style="color:var(--green)">src="images/新しいファイル名"</code> に書き換えて保存
+          </div>
+        </div>
+      </div>
+
+      <h3>現在の写真の使われ方</h3>
+      <div class="file-list">
+        <div class="file-item">
+          <div class="file-name">../サロンカー.jpg</div>
+          <div class="file-desc">トップページ ヒーロー背景・サービスカード・アクセスマップ横</div>
+        </div>
+        <div class="file-item">
+          <div class="file-name">../LINE_ALBUM_..._3.jpg</div>
+          <div class="file-desc">トップページ コンセプト写真</div>
+        </div>
+        <div class="file-item">
+          <div class="file-name">../IMG_2673.jpeg</div>
+          <div class="file-desc">Wellciergeページ プロフィール写真</div>
+        </div>
+        <div class="file-item">
+          <div class="file-name">../LINE_ALBUM_..._5.jpg</div>
+          <div class="file-desc">Aboutページ ヒーロー背景・サービスカード</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 基本情報を変更 ===== -->
+    <section class="guide-section" id="siteinfo">
+      <h2>基本情報（住所・営業時間・LINE・メール）を変更する</h2>
+      <span class="badge badge-easy">⭐ js/news-data.js だけ編集</span>
+
+      <p><strong>js/news-data.js</strong> の一番下にある <code style="color:var(--gold)">SITE_INFO</code> を編集してください。</p>
+
+      <div class="code-box"><span class="comment">// ⚙️ サイト基本情報 — ここを変更してください</span>
+<span class="key">const SITE_INFO</span> = {
+  name:    <span class="value">"Re美力Labo Infinity"</span>,       ← サロン名
+  address: <span class="value">"〒674-0065 兵庫県明石市..."</span>, ← 住所
+  hours:   <span class="value">"10:00 〜 20:00（不定休）"</span>,  ← 営業時間
+  lineId:  <span class="value">"@snn9506v"</span>,                 ← LINE ID
+  lineUrl: <span class="value">"https://line.me/..."</span>,       ← LINE URL
+  email:   <span class="value">"メールアドレス"</span>,             ← メール
+};</div>
+
+      <div class="info-card warn">
+        <div class="label">注意</div>
+        <p style="margin:0; font-size:0.85rem; color:#aaa;">
+          SITE_INFO はフッター・アクセスページ等に自動反映するよう今後追加予定です。<br>
+          現在はHTMLファイル内も手動で変更してください（Ctrl+H で一括置換が便利です）。
+        </p>
+      </div>
+
+      <h3>全ページのフッター情報をまとめて変更したい場合</h3>
+      <p>VS Codeで <strong>websiteフォルダを開いて</strong>、<br>
+      Ctrl+Shift+H（一括置換）で古いテキストを新しいテキストに一括で置き換えられます。</p>
+    </section>
+
+    <!-- ===== メニュー料金を変更 ===== -->
+    <section class="guide-section" id="menu">
+      <h2>メニュー・料金を変更する</h2>
+      <span class="badge badge-medium">menu.html を編集</span>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body"><strong>menu.html</strong> をテキストエディタで開く</div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <strong>Ctrl+F</strong> で変更したいメニュー名を検索<br>
+            <span style="color:#888; font-size:0.85rem;">例：「キャビテーション」で検索</span>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">以下の部分を探して書き換える</div>
+        </div>
+      </div>
+
+      <div class="code-box">&lt;div class=<span class="value">"menu-item"</span>&gt;
+  &lt;div class=<span class="value">"menu-item-name"</span>&gt;<span class="hl">メニュー名</span>&lt;/div&gt;
+  &lt;div class=<span class="value">"menu-item-desc"</span>&gt;<span class="hl">説明文</span>&lt;/div&gt;
+  &lt;div class=<span class="value">"menu-item-price"</span>&gt;¥ <span class="hl">12,000</span>&lt;span&gt;（税込）&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;</div>
+
+      <h3>新しいメニューを追加する場合</h3>
+      <p>上のブロックをまるごとコピーして、隣に貼り付けて内容を書き換えてください。</p>
+    </section>
+
+    <!-- ===== 各ページのテキスト ===== -->
+    <section class="guide-section" id="text">
+      <h2>各ページのテキストを変更する</h2>
+      <span class="badge badge-medium">各HTMLファイルを直接編集</span>
+
+      <p>HTMLファイルを開くと、テキストが書かれた部分にコメントマークが付いています。</p>
+
+      <div class="code-box"><span class="comment">&lt;!-- ✏️ EDIT: キャッチコピー ここから --&gt;</span>
+&lt;p class=<span class="value">"hero-catchcopy"</span>&gt;
+  内側から輝く、あなた本来の美しさへ。&lt;br&gt;  ← ここを編集
+  サロン・サロンカー・スクールで&lt;br&gt;
+  トータルビューティをご提供します。
+&lt;/p&gt;
+<span class="comment">&lt;!-- ✏️ EDIT: ここまで --&gt;</span></div>
+
+      <p>このコメントを目印にテキストを探して書き換えてください。</p>
+
+      <div class="info-card tip">
+        <div class="label">ヒント</div>
+        <p style="margin:0; font-size:0.85rem; color:#aaa;">
+          <strong>&lt;br&gt;</strong> は改行です。文中に入れると改行されます。<br>
+          <strong>&lt;strong&gt;太字&lt;/strong&gt;</strong> で太字になります。<br>
+          タグ（&lt; &gt;で囲まれた部分）は変更しないでください。
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== Netlifyへアップロード ===== -->
+    <section class="guide-section" id="deploy">
+      <h2>変更をNetlifyに反映する</h2>
+
+      <p>ファイルを編集したら、Netlifyに再アップロードすることでサイトに反映されます。</p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <strong>app.netlify.com</strong> にアクセスしてログイン
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            自分のサイトを選んで「<strong>Deploys</strong>」タブを開く
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <strong>websiteフォルダ全体</strong>を画面にドラッグ＆ドロップ<br>
+            <span style="color:#888; font-size:0.85rem;">ファイル1つではなく、websiteフォルダごとドロップしてください</span>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            「Deploy」と表示されたら完了。数十秒でサイトに反映されます
+          </div>
+        </div>
+      </div>
+
+      <div class="info-card tip">
+        <div class="label">ポイント</div>
+        <p style="margin:0; font-size:0.85rem; color:#aaa;">
+          写真を変更した場合も、必ずwebsiteフォルダ全体をアップロードしてください。<br>
+          写真は <strong>website/images/</strong> フォルダに入れてからアップロードするのが確実です。
+        </p>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+</body>
+</html>

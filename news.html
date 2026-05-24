@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News | Re美力Labo Infinity</title>
+  <meta name="description" content="Re美力Labo Infinityのお知らせ・ブログ。サロン情報・キャンペーン・スクール情報などをお届けします。">
+  <link rel="icon" type="image/png" href="images/logo-black店名無し.png">
+  <meta property="og:site_name" content="Re美力Labo Infinity">
+  <meta property="og:title" content="News | Re美力Labo Infinity">
+  <meta property="og:description" content="Re美力Labo Infinityのお知らせ・ブログ。サロン情報・キャンペーン・スクール情報などをお届けします。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rebiryoku-infinity.netlify.app/news.html">
+  <meta property="og:image" content="https://rebiryoku-infinity.netlify.app/lp/images/サロンイメージ画像.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* News page specific */
+    .news-filter {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+    }
+    .filter-btn {
+      padding: 0.4rem 1.2rem;
+      font-family: var(--font-en-serif);
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      border: 1px solid var(--border-gold);
+      color: var(--text-muted);
+      background: none;
+      cursor: pointer;
+      transition: var(--transition-fast);
+    }
+    .filter-btn.active,
+    .filter-btn:hover {
+      border-color: var(--gold);
+      color: var(--gold-light);
+    }
+    .news-full-item {
+      padding: 3rem 0;
+      border-bottom: 1px solid var(--border-gold);
+    }
+    .news-full-item:first-child {
+      border-top: 1px solid var(--border-gold);
+    }
+    .news-full-header {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 1.25rem;
+      flex-wrap: wrap;
+    }
+    .news-full-date {
+      font-family: var(--font-en-serif);
+      font-size: 0.85rem;
+      color: var(--gold);
+      letter-spacing: 0.1em;
+    }
+    .news-full-title {
+      font-family: var(--font-jp-serif);
+      font-size: 1.15rem;
+      color: var(--cream);
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+    .news-full-body {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 2.3;
+    }
+    .news-full-body p + p {
+      margin-top: 1rem;
+    }
+    .news-image {
+      width: 100%;
+      max-width: 600px;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      margin: 1.5rem 0;
+      filter: grayscale(15%);
+    }
+    /* How to add new posts — visible only in source code */
+    /* コピーして使ってください ↓
+    <div class="news-full-item">
+      <div class="news-full-header">
+        <span class="news-full-date">2026.XX.XX</span>
+        <span class="news-category">カテゴリ</span>
+      </div>
+      <h2 class="news-full-title">タイトル</h2>
+      <div class="news-full-body">
+        <p>本文をここに書きます。</p>
+      </div>
+    </div>
+    */
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header scrolled" id="site-header">
+    <nav class="nav-inner">
+      <a href="index.html" class="site-logo">
+        <span class="logo-main">Re美力Labo Infinity</span>
+        <span class="logo-sub">Beauty &amp; Wellness</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Top</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="nav-menu-dropdown" id="nav-menu-dropdown">
+          <a href="menu.html#salon" class="nav-menu-btn" id="nav-menu-btn">Menu</a>
+          <ul class="nav-menu-list" role="menu">
+            <li><a href="menu.html#salon" role="menuitem">Salon</a></li>
+            <li><a href="menu.html#saloncar" role="menuitem">Salon Car</a></li>
+            <li><a href="menu.html#school" role="menuitem">School</a></li>
+          </ul>
+        </li>
+        <li><a href="wellcierge.html">Wellcierge</a></li>
+        <li><a href="news.html" class="active">News</a></li>
+        <li><a href="access.html">Access</a></li>
+      </ul>
+      <div class="lang-dropdown" id="lang-dropdown">
+        <button class="lang-dropdown-btn" id="lang-dropdown-btn" aria-haspopup="true" aria-expanded="false">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>
+          Language
+        </button>
+        <ul class="lang-dropdown-menu" role="menu">
+          <li><button class="lang-option active" data-lang="ja" role="menuitem">日本語</button></li>
+          <li><button class="lang-option" data-lang="en" role="menuitem">English</button></li>
+          <li><button class="lang-option" data-lang="fr" role="menuitem">Français</button></li>
+          <li><button class="lang-option" data-lang="zh-CN" role="menuitem">中文（简体）</button></li>
+          <li><button class="lang-option" data-lang="zh-TW" role="menuitem">中文（繁體）</button></li>
+          <li><button class="lang-option" data-lang="ko" role="menuitem">한국어</button></li>
+        </ul>
+      </div>
+      <button class="hamburger" aria-label="メニュー">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <nav class="mobile-nav">
+    <a href="index.html">Top</a>
+    <a href="about.html">About</a>
+    <a href="menu.html">Menu</a>
+    <a href="wellcierge.html">Wellcierge</a>
+    <a href="news.html">News</a>
+    <a href="access.html">Access</a>
+  </nav>
+
+  <!-- ===== PAGE HERO ===== -->
+  <div class="page-hero">
+    <img class="page-hero-image" src="images/バナー2.png" alt="News" fetchpriority="high">
+    <div class="page-hero-content">
+      <span class="page-hero-tag">Information &amp; Blog</span>
+      <h1 class="page-hero-title gold-text">News</h1>
+      <p class="page-hero-title-jp">お知らせ・ブログ</p>
+    </div>
+  </div>
+
+  <!-- ===== NEWS LIST ===== -->
+  <section>
+    <div class="section-inner">
+      <!-- ✅ 記事はjs/news-data.jsで管理します。あのファイルを編集してください -->
+      <div id="news-list"></div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="bg-medium" style="padding: 5rem 2rem; text-align: center;">
+    <div class="section-inner">
+      <div class="fade-in">
+        <span class="section-tag">Reservation</span>
+        <h2 class="section-title" style="margin-bottom:1rem;">ご予約・お問い合わせ</h2>
+        <p class="section-subtitle" style="margin-top:0; margin-bottom:3rem;">
+          LINEにてお気軽にご連絡ください。
+        </p>
+        <div class="sns-links">
+          <a href="https://line.me/ti/p/@snn9506v" class="sns-link" target="_blank" rel="noopener">
+            LINE で予約・相談
+          </a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfiTeY6coS5xLp5Zf1o92QB1NUmzGNv9Fzl4UUfUg1ZlBwT3A/viewform?usp=header" class="sns-link" target="_blank" rel="noopener">
+            お問い合わせフォーム
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-logo">Re美力Labo Infinity</div>
+      <div class="footer-logo-sub">Wellcierge — Beauty &amp; Wellness Specialist</div>
+      <nav class="footer-nav">
+        <a href="index.html">Top</a>
+        <a href="about.html">About</a>
+        <a href="menu.html">Menu</a>
+        <a href="wellcierge.html">Wellcierge</a>
+        <a href="news.html">News</a>
+        <a href="access.html">Access</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+      <div class="footer-info">
+        〒674-0065 兵庫県明石市大久保町西島<br>
+        営業時間 10:00〜20:00（不定休）<br>
+        LINE: @snn9506v ／ rebiryokulabo.infinity@gmail.com
+      </div>
+      <div class="footer-copy">
+        &copy; 2026 Re美力Labo Infinity. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <div id="google_translate_element" style="display:none;"></div>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script src="js/news-data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // news-data.js の記事を自動で描画
+    const list = document.getElementById('news-list');
+    if (list && typeof NEWS_POSTS !== 'undefined') {
+      list.innerHTML = NEWS_POSTS.map(post => {
+        const paragraphs = post.body.split('\n\n').map(p => `<p>${p.trim()}</p>`).join('');
+        const img = post.image
+          ? `<img class="news-image" src="${post.image}" alt="${post.title}">`
+          : '';
+        return `
+          <div class="news-full-item fade-in">
+            <div class="news-full-header">
+              <span class="news-full-date">${post.date}</span>
+              <span class="news-category">${post.category}</span>
+            </div>
+            <h2 class="news-full-title">${post.title}</h2>
+            <div class="news-full-body">${paragraphs}${img}</div>
+          </div>`;
+      }).join('');
+      // スクロールアニメを再登録
+      document.querySelectorAll('.fade-in').forEach(el => {
+        const io = new IntersectionObserver(entries => {
+          entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.12 });
+        io.observe(el);
+      });
+    }
+  </script>
+</body>
+</html>

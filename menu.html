@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu | Re美力Labo Infinity</title>
+  <meta name="description" content="Re美力Labo Infinityのサロン・サロンカー・スクールのメニュー一覧。脂肪冷却・フェイシャル・よもぎ蒸し・各種講座など。">
+  <link rel="icon" type="image/png" href="images/logo-black店名無し.png">
+  <meta property="og:site_name" content="Re美力Labo Infinity">
+  <meta property="og:title" content="Menu | Re美力Labo Infinity">
+  <meta property="og:description" content="フェイシャルエステ・脂肪冷却・フォトライト脱毛・WAX脱毛・よもぎ蒸しなど充実のメニュー。移動サロンカーサービスも好評展開中。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rebiryoku-infinity.netlify.app/menu.html">
+  <meta property="og:image" content="https://rebiryoku-infinity.netlify.app/lp/images/TOPサロンメニューページ用画像.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* サロンカー料金テーブル: 6回分現金一括列（暖色ゴールド）とSubscription列（セージグリーン）で色分け */
+    .menu-panel[data-panel="saloncar"] table td:nth-child(3) {
+      color: #D4B45A !important;
+    }
+    .menu-panel[data-panel="saloncar"] table td:nth-child(4) {
+      color: #8EC4B0 !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header scrolled" id="site-header">
+    <nav class="nav-inner">
+      <a href="index.html" class="site-logo">
+        <span class="logo-main">Re美力Labo Infinity</span>
+        <span class="logo-sub">Beauty &amp; Wellness</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Top</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="nav-menu-dropdown" id="nav-menu-dropdown">
+          <a href="menu.html#salon" class="nav-menu-btn" id="nav-menu-btn">Menu</a>
+          <ul class="nav-menu-list" role="menu">
+            <li><a href="menu.html#salon" role="menuitem">Salon</a></li>
+            <li><a href="menu.html#saloncar" role="menuitem">Salon Car</a></li>
+            <li><a href="menu.html#school" role="menuitem">School</a></li>
+          </ul>
+        </li>
+        <li><a href="wellcierge.html">Wellcierge</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="access.html">Access</a></li>
+      </ul>
+      <div class="lang-dropdown" id="lang-dropdown">
+        <button class="lang-dropdown-btn" id="lang-dropdown-btn" aria-haspopup="true" aria-expanded="false">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>
+          Language
+        </button>
+        <ul class="lang-dropdown-menu" role="menu">
+          <li><button class="lang-option active" data-lang="ja" role="menuitem">日本語</button></li>
+          <li><button class="lang-option" data-lang="en" role="menuitem">English</button></li>
+          <li><button class="lang-option" data-lang="fr" role="menuitem">Français</button></li>
+          <li><button class="lang-option" data-lang="zh-CN" role="menuitem">中文（简体）</button></li>
+          <li><button class="lang-option" data-lang="zh-TW" role="menuitem">中文（繁體）</button></li>
+          <li><button class="lang-option" data-lang="ko" role="menuitem">한국어</button></li>
+        </ul>
+      </div>
+      <button class="hamburger" aria-label="メニュー">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <nav class="mobile-nav">
+    <a href="index.html">Top</a>
+    <a href="about.html">About</a>
+    <a href="menu.html">Menu</a>
+    <a href="wellcierge.html">Wellcierge</a>
+    <a href="news.html">News</a>
+    <a href="access.html">Access</a>
+  </nav>
+
+  <!-- ===== PAGE HERO ===== -->
+  <div class="page-hero" id="salon">
+    <img class="page-hero-image" src="images/バナー3.png" alt="Menu" fetchpriority="high">
+    <div class="page-hero-content">
+      <span class="page-hero-tag">Services</span>
+      <h1 class="page-hero-title gold-text">Menu</h1>
+      <p class="page-hero-title-jp">メニュー一覧</p>
+    </div>
+  </div>
+
+  <!-- ===== TABS + MENU ===== -->
+  <section>
+    <div class="section-inner">
+
+      <div class="menu-tabs">
+        <button class="menu-tab active" data-tab="salon">Salon</button>
+        <button class="menu-tab" data-tab="saloncar">Salon Car</button>
+        <button class="menu-tab" data-tab="school">School</button>
+      </div>
+
+      <!-- ===== SALON MENU ===== -->
+      <div class="menu-panel active" data-panel="salon" id="salonpanel">
+
+        <!-- Panel Hero -->
+        <div class="menu-panel-hero">
+          <img src="images/TOPサロンメニューページ用画像.png" alt="サロンメニュー">
+          <div class="menu-panel-hero-content">
+            <p class="menu-panel-hero-en">Private Salon Treatment</p>
+            <h2 class="menu-panel-hero-title">Salon Menu</h2>
+            <p class="menu-panel-hero-subtitle">完全プライベート空間で受けるこだわりの美容ケア</p>
+          </div>
+        </div>
+
+        <!-- フェイシャル -->
+        <div class="menu-section-title">フェイシャルメニュー</div>
+        <div class="menu-mid-banner" style="height:220px; margin-bottom:2rem;">
+          <img src="images/フェイシャルエステ.png" alt="フェイシャルエステ">
+          <div class="menu-mid-banner-text">
+            <p>お肌の奥から美しさを引き出す<br>本格フェイシャルケア</p>
+          </div>
+        </div>
+        <div class="menu-grid">
+          <div class="menu-item">
+            <span class="menu-item-tag">おすすめ</span>
+            <div class="menu-item-name">美肌コース</div>
+            <div class="menu-item-desc">医薬部外品コスメを使用した基本のトータルフェイシャル。クレンジング・角質ケア・保湿導入・パックまでフルコース約60分。毎日のスキンケアでは届かない深部へアプローチし、肌本来の美しさを底上げします。</div>
+            <div class="menu-item-price">¥ <span>7,700</span></div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name">美白コース</div>
+            <div class="menu-item-desc"><span style="display:inline-block; font-size:0.7rem; color:var(--gold); letter-spacing:0.1em; margin-bottom:0.4rem;">✦ LEDライトマスク付き</span><br>美肌ケアにプラスして、シミ・ソバカス・くすみへ集中アプローチ。美白有効成分をたっぷり浸透させ、透明感あふれる明るい肌へ導きます。紫外線ダメージが気になる方に特におすすめ。</div>
+            <div class="menu-item-price">¥ <span>8,800</span></div>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-tag">Premium</span>
+            <div class="menu-item-name">美艶コース</div>
+            <div class="menu-item-desc"><span style="display:inline-block; font-size:0.7rem; color:var(--gold); letter-spacing:0.1em; margin-bottom:0.4rem;">✦ LEDマスク・ソニックトリートメント付き</span><br>最高峰の「ヒト幹細胞培養液」を贅沢に使用したリバースエイジングコース。細胞レベルから肌の再生力を高め、ツヤ・弾力・ハリの明確な改善を実感いただけます。加齢によるたるみ・小じわが気になる方へ。</div>
+            <div class="menu-item-price">¥ <span>11,000</span></div>
+          </div>
+        </div>
+
+        <!-- フェイシャルオプション -->
+        <div class="menu-section-title">フェイシャルオプション <span style="font-size:0.7rem; font-weight:300; color:var(--text-muted); letter-spacing:0.05em;">— フェイシャルコースに追加できます</span></div>
+        <div class="menu-grid">
+
+          <!-- 1位：光アイスフォトフェイシャル（画像付き・価格2段表示） -->
+          <div class="menu-item" style="padding:0; overflow:hidden;">
+            <img src="images/フォトフェイシャル.png" alt="光アイスフォトフェイシャル" style="width:100%; height:170px; object-fit:cover; display:block; filter:brightness(0.8);">
+            <div style="padding:1.5rem 1.8rem 1.8rem;">
+              <span class="menu-item-tag">人気No.1</span>
+              <div class="menu-item-name">光アイスフォトフェイシャル</div>
+              <div class="menu-item-desc">冷却しながら光照射する独自のフォトフェイシャル。シミ・毛穴・赤み・くすみへ多面的にアプローチし、肌の自己再生能力を向上させます。痛みが少なく初めての方にも◎。</div>
+              <div style="display:flex; flex-direction:column; gap:0.3rem; margin-top:0.5rem;">
+                <div style="font-size:0.72rem; color:var(--text-muted); font-family:var(--font-jp-sans);">フェイシャルコース追加 <span style="font-family:var(--font-en-serif); font-size:1.2rem; color:var(--gold-light);">¥5,500</span></div>
+                <div style="font-size:0.72rem; color:var(--text-muted); font-family:var(--font-jp-sans);">単体施術 <span style="font-family:var(--font-en-serif); font-size:1.2rem; color:var(--gold-light);">¥8,800</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2位：ラジオ波フェイス -->
+          <div class="menu-item" style="padding:0; overflow:hidden;">
+            <img src="images/ラジオ波フェイシャル.png" alt="ラジオ波フェイス" style="width:100%; height:170px; object-fit:cover; display:block; filter:brightness(0.82);">
+            <div style="padding:1.5rem 1.8rem 1.8rem;">
+              <div class="menu-item-name">ラジオ波フェイス</div>
+              <div class="menu-item-desc">高周波エネルギーが肌の真皮層に直接作用し、コラーゲン生成を促進。たるみ・ハリ不足・毛穴の開きが気になる方に。施術後は肌がキュッと引き締まる感覚を実感できます。</div>
+              <div class="menu-item-price">¥ <span>5,500</span></div>
+            </div>
+          </div>
+
+          <!-- 3位：ヒト幹細胞培養液パック（画像付き） -->
+          <div class="menu-item" style="padding:0; overflow:hidden;">
+            <img src="images/シートマスク.png" alt="ヒト幹細胞培養液パック" style="width:100%; height:170px; object-fit:cover; display:block; filter:brightness(0.82);">
+            <div style="padding:1.5rem 1.8rem 1.8rem;">
+              <span class="menu-item-tag">Luxury</span>
+              <div class="menu-item-name">ヒト幹細胞培養液パック</div>
+              <div class="menu-item-desc">希少なヒト幹細胞成分を凝縮したセレブパック。細胞の再生力・自己回復力を高め、ワンランク上の肌へ導きます。特別な日の前に取り入れたい贅沢なオプションです。</div>
+              <div class="menu-item-price">¥ <span>3,300</span></div>
+            </div>
+          </div>
+
+          <!-- 4位：ソニック -->
+          <div class="menu-item" style="padding:0; overflow:hidden;">
+            <img src="images/ソニックトリートメント図解.png" alt="ソニックトリートメント" style="width:100%; height:auto; display:block;">
+            <div style="padding:1.5rem 1.8rem 1.8rem;">
+              <div class="menu-item-name">ソニックトリートメント</div>
+              <div class="menu-item-desc">超音波振動で肌の深部にアプローチ。毛穴の汚れを浮かせながら美容成分の浸透を高めます。洗顔では落としきれない皮脂や古い角質をすっきり除去したい方に。</div>
+              <div class="menu-item-price">¥ <span>2,200</span></div>
+            </div>
+          </div>
+
+          <!-- 5位：イオン -->
+          <div class="menu-item" style="padding:0; overflow:hidden;">
+            <img src="images/イオントリートメント図解.png" alt="イオントリートメント" style="width:100%; height:auto; display:block;">
+            <div style="padding:1.5rem 1.8rem 1.8rem;">
+              <div class="menu-item-name">イオントリートメント</div>
+              <div class="menu-item-desc">マイナスイオンで皮膚表面の汚れ・古い角質を除去し、プラスイオンで美容液を肌深部へ導入。クレンジング効果と美容液浸透を同時に叶えます。</div>
+              <div class="menu-item-price">¥ <span>2,200</span></div>
+            </div>
+          </div>
+
+          <!-- 6位：エレクトロポレーション -->
+          <div class="menu-item" style="padding:0; overflow:hidden;">
+            <img src="images/エレクトロポレーション図解.png" alt="エレクトロポレーション" style="width:100%; height:auto; display:block;">
+            <div style="padding:1.5rem 1.8rem 1.8rem;">
+              <div class="menu-item-name">エレクトロポレーション</div>
+              <div class="menu-item-desc">微弱な電流で細胞膜に一時的な透過孔を形成し、有効成分を細胞レベルまで届ける最先端の美容技術。ヒアルロン酸・コラーゲンなどの大きな分子も肌奥へ浸透させます。</div>
+              <div class="menu-item-price">¥ <span>2,200</span></div>
+            </div>
+          </div>
+
+          <!-- 7位：LED -->
+          <div class="menu-item" style="padding:0; overflow:hidden;">
+            <img src="images/LEDライトマスク.png" alt="LEDライトマスク" style="width:100%; height:170px; object-fit:cover; display:block;">
+            <div style="padding:1.5rem 1.8rem 1.8rem;">
+              <div class="menu-item-name">LEDライトマスク</div>
+              <div class="menu-item-desc">肌の悩みに合わせた複数カラーを照射。赤はコラーゲン生成・青は鎮静・黄は美白促進など、課題に応じたライトでお肌をケアします。施術後の仕上げとして特に効果的。</div>
+              <div class="menu-item-price">¥ <span>1,100</span></div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ボディメイク -->
+        <div class="menu-section-title">ボディメイクメニュー</div>
+        <div class="menu-grid">
+
+          <!-- 脂肪冷却ボディ（メイン・フル幅） -->
+          <div class="menu-item" style="grid-column: 1 / -1; display:grid; grid-template-columns: 1fr 1fr; gap:0; padding:0; overflow:hidden;">
+            <div style="padding:2rem 2.5rem; display:flex; flex-direction:column; justify-content:center; gap:0.6rem;">
+              <span class="menu-item-tag">人気No.1</span>
+              <div class="menu-item-name" style="font-size:1.15rem;">脂肪冷却ボディ</div>
+              <div class="menu-item-desc">脂肪細胞を-4℃まで冷却して凍結・自然排出させる部分痩せ専用マシン。<strong style="color:var(--gold-pale); font-weight:400;">同時に最大4カップまで施術可能</strong>なため、広い部位もまとめてケアできます。施術中は読書やスマホOKな「ながら痩せ」が叶います。<br><br>
+              脂肪細胞そのものを減らすためリバウンドしにくいのが最大の特長。冷却後は同部位に下記よりお好みの1メニューを組み合わせて施術し、さらなる効果を引き出します。
+              </div>
+              <div style="margin-top:0.5rem; padding:0.8rem 1rem; border:1px solid var(--border-gold); font-size:0.75rem; color:var(--text-secondary); font-family:var(--font-jp-sans); line-height:2; font-weight:300;">
+                冷却後セット施術（1つ選択）<br>
+                <span style="color:var(--gold);">キャビテーション</span> ／ <span style="color:var(--gold);">ラジオ波ボディ</span> ／ <span style="color:var(--gold);">痩身リポレーザー</span>
+              </div>
+              <div style="display:flex; flex-direction:column; gap:0.3rem; margin-top:0.5rem;">
+                <div style="font-size:0.72rem; color:var(--text-muted); font-family:var(--font-jp-sans);">単発施術 <span style="font-family:var(--font-en-serif); font-size:1.3rem; color:var(--gold-light);">¥22,000</span></div>
+                <div style="font-size:0.72rem; color:var(--text-muted); font-family:var(--font-jp-sans);">サブスク登録 <span style="font-family:var(--font-en-serif); font-size:1.3rem; color:var(--gold-light);">¥19,800</span> <span style="font-size:0.62rem;">/月</span></div>
+              </div>
+              <p style="font-size:0.65rem; color:var(--text-muted); font-family:var(--font-jp-sans); line-height:1.8; margin-top:0.6rem; font-weight:300;">※ Subscriptionは月1回×6ヶ月以上の継続プランです。クレジットカード登録が必要です。<br>※ 解約の場合は2か月前の申告が必要です。</p>
+            </div>
+            <div style="position:relative; overflow:hidden; border-left:1px solid var(--border-gold); min-height:300px;">
+              <img src="images/脂肪冷却ボディ.png" alt="脂肪冷却マシン" style="width:100%; height:100%; object-fit:cover; display:block; filter:brightness(0.75);">
+              <div style="position:absolute; inset:0; display:flex; flex-direction:column; justify-content:flex-end; padding:1.8rem; background:linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 60%);">
+                <div style="text-align:center;">
+                  <div style="font-size:0.58rem; letter-spacing:0.25em; color:var(--gold); font-family:var(--font-en-serif); margin-bottom:0.3rem;">MAX</div>
+                  <div style="font-size:3rem; font-family:var(--font-en-serif); font-weight:300; color:var(--cream); line-height:1;">4</div>
+                  <div style="font-size:0.62rem; letter-spacing:0.15em; color:rgba(212,192,148,0.9); font-family:var(--font-jp-sans); font-weight:300; margin-top:0.3rem;">カップ同時施術</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- キャビテーション -->
+          <div class="menu-item" style="padding:0; overflow:hidden;">
+            <img src="images/キャビテーション.png" alt="キャビテーション" style="width:100%; height:170px; object-fit:cover; display:block; filter:brightness(0.82);">
+            <div style="padding:1.5rem 1.8rem 1.8rem;">
+              <span class="menu-item-tag">冷却後セット対象</span>
+              <div class="menu-item-name">キャビテーション</div>
+              <div class="menu-item-desc">40kHz超音波で脂肪細胞を内側から振動・乳化させ、部分的なサイズダウンを目指す施術。セルライトの改善にも効果的。痛みなし・ダウンタイムなしで施術後すぐに日常生活に戻れます。脂肪冷却後に組み合わせると排出を後押しし、より高い効果が期待できます。</div>
+              <div class="menu-item-price">¥ <span>7,700</span><span style="font-size:0.65rem; color:var(--text-muted); margin-left:0.4rem; font-family:var(--font-jp-sans);">単体</span></div>
+            </div>
+          </div>
+
+          <!-- ラジオ波ボディ -->
+          <div class="menu-item" style="padding:0; overflow:hidden;">
+            <img src="images/ラジオ波ボディ.png" alt="ラジオ波ボディ" style="width:100%; height:170px; object-fit:cover; display:block; filter:brightness(0.82);">
+            <div style="padding:1.5rem 1.8rem 1.8rem;">
+              <span class="menu-item-tag">冷却後セット対象</span>
+              <div class="menu-item-name">ラジオ波ボディ</div>
+              <div class="menu-item-desc">高周波エネルギーが脂肪層・真皮層を深部から加熱。脂肪分解・燃焼・引き締め・セルライト改善の効果を同時にアプローチ。施術後は体がポカポカと温まり、代謝アップの実感が続きます。脂肪冷却後に組み合わせると温熱効果で排出をさらに促進します。</div>
+              <div class="menu-item-price">¥ <span>7,700</span><span style="font-size:0.65rem; color:var(--text-muted); margin-left:0.4rem; font-family:var(--font-jp-sans);">単体</span></div>
+            </div>
+          </div>
+
+          <!-- 痩身リポレーザー -->
+          <div class="menu-item" style="padding:0; overflow:hidden;">
+            <img src="images/痩身リポレーザー.png" alt="痩身リポレーザー" style="width:100%; height:170px; object-fit:cover; display:block; filter:brightness(0.82);">
+            <div style="padding:1.5rem 1.8rem 1.8rem;">
+              <span class="menu-item-tag">冷却後セット対象</span>
+              <div class="menu-item-name">痩身リポレーザー</div>
+              <div class="menu-item-desc">特定波長の光エネルギーで脂肪細胞を乳化・分解する施術。副作用・ダウンタイムなしで気軽に通えるのが魅力。じっくりと部分痩せを目指したい方に人気。脂肪冷却後に組み合わせることで分解・排出の相乗効果が得られます。</div>
+              <div class="menu-item-price">¥ <span>7,700</span><span style="font-size:0.65rem; color:var(--text-muted); margin-left:0.4rem; font-family:var(--font-jp-sans);">単体</span></div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ボディケアセクション 画像バナー -->
+        <div class="menu-mid-banner">
+          <img src="images/クラニアルメソッド.png" alt="クラニアルメソッド 頭蓋骨調整">
+          <div class="menu-mid-banner-text">
+            <p>頭蓋骨から全身を整える<br>東洋×西洋の融合ボディケア</p>
+          </div>
+        </div>
+
+        <!-- ボディケア -->
+        <div class="menu-section-title">ボディケア・リラクゼーション</div>
+        <div class="menu-grid">
+          <div class="menu-item" style="padding:0; overflow:hidden;">
+            <img src="images/クラニアルメソッド.png" alt="クラニアルメソッド 頭蓋骨調整" style="width:100%; height:170px; object-fit:cover; display:block; filter:brightness(0.82);">
+            <div style="padding:1.5rem 1.8rem 1.8rem;">
+              <span class="menu-item-tag">おすすめ</span>
+              <div class="menu-item-name">クラニアルメソッド®（頭蓋骨調整）</div>
+              <div class="menu-item-desc">頭蓋骨にアプローチするだけで全身の歪みを整える独自技法。<strong style="color:var(--gold-pale); font-weight:400;">患部に直接触れずに、頭蓋骨を調整するだけで痛みが和らいだり可動域が広がる</strong>、不思議で珍しい施術です。小顔効果はもちろん、自律神経の乱れ・頭痛・肩こり・眼精疲労のケアにも効果的。施術後の顔と身体の変化に驚く方続出。初回はカウンセリング込みでお得な料金でご案内。</div>
+              <div class="menu-item-price">¥ <span>7,700 / 初回 6,600</span></div>
+            </div>
+          </div>
+          <div class="menu-item" style="padding:0; overflow:hidden;">
+            <img src="images/フォトライトバストケア.png" alt="フォトライトバストケア" style="width:100%; height:170px; object-fit:cover; display:block; filter:brightness(0.82);">
+            <div style="padding:1.5rem 1.8rem 1.8rem;">
+              <div class="menu-item-name">フォトライトバストケア</div>
+              <div class="menu-item-desc">フォトライトの光エネルギーでクーパー靭帯を強化し、コラーゲン生成を促進することでバストのハリ・弾力・形を改善する女性専用メニュー。女性ホルモンの活性化サポートにより、ふっくらとしたバストラインへ導きます。ボディラインを整えたい方に。</div>
+              <div style="display:flex; flex-direction:column; gap:0.3rem; margin-top:0.5rem;">
+                <div style="font-size:0.72rem; color:var(--text-muted); font-family:var(--font-jp-sans);">ライト照射のみ <span style="font-family:var(--font-en-serif); font-size:1.2rem; color:var(--gold-light);">¥8,800</span></div>
+                <div style="font-size:0.72rem; color:var(--text-muted); font-family:var(--font-jp-sans);">バストアップエステ付き <span style="font-family:var(--font-en-serif); font-size:1.2rem; color:var(--gold-light);">¥11,000</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="menu-item" style="padding:0; overflow:hidden;">
+            <img src="images/カッピング.png" alt="カッピング" style="width:100%; height:170px; object-fit:cover; display:block; filter:brightness(0.82);">
+            <div style="padding:1.5rem 1.8rem 1.8rem;">
+              <div class="menu-item-name">カッピング（上半身 or 下半身）</div>
+              <div class="menu-item-desc">吸玉で皮膚を吸引し、深部の血流・リンパの滞りを改善する東洋医学療法。強力なデトックス効果があり、慢性的な肩こり・腰痛・疲れが抜けない方に特に効果的。施術後のお流しオプションで老廃物の排出をさらに促進できます。</div>
+              <div style="display:flex; flex-direction:column; gap:0.3rem; margin-top:0.5rem;">
+                <div style="font-size:0.72rem; color:var(--text-muted); font-family:var(--font-jp-sans);">お流しなし <span style="font-family:var(--font-en-serif); font-size:1.2rem; color:var(--gold-light);">¥3,300</span></div>
+                <div style="font-size:0.72rem; color:var(--text-muted); font-family:var(--font-jp-sans);">お流しあり <span style="font-family:var(--font-en-serif); font-size:1.2rem; color:var(--gold-light);">¥4,400</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="menu-item" style="padding:0; overflow:hidden;">
+            <img src="images/リフレッシュボディケア.png" alt="リフレッシュボディケア" style="width:100%; height:170px; object-fit:cover; display:block; filter:brightness(0.82);">
+            <div style="padding:1.5rem 1.8rem 1.8rem;">
+              <div class="menu-item-name">リフレッシュボディケア</div>
+              <div class="menu-item-desc">ハーブスプレーを使った全身の揉みほぐし。<strong style="color:var(--gold-pale); font-weight:400;">着衣のまま施術可能</strong>なので気軽にご利用いただけます。凝り固まった筋肉をほぐしながら、ハーブの心地よい香りで心身ともにリフレッシュ。むくみ・コリが気になる方、仕事疲れのリセットに最適。時間・部位はご相談可。</div>
+              <div class="menu-item-price">¥ <span>5,500〜</span></div>
+            </div>
+          </div>
+          <div class="menu-item" style="padding:0; overflow:hidden;">
+            <img src="images/オイルボディケア.png" alt="オイルボディケア" style="width:100%; height:170px; object-fit:cover; display:block; filter:brightness(0.82);">
+            <div style="padding:1.5rem 1.8rem 1.8rem;">
+              <div class="menu-item-name">オイルボディケア</div>
+              <div class="menu-item-desc">肌なじみの良いオイルを使ったリンパトリートメント。全身のリンパの流れを整えながら老廃物の排出を促進。むくみ・冷え・疲労感の改善に効果的です。オイルの温かみと香りが深いリラックスをもたらし、施術後は体が驚くほど軽くなります。</div>
+              <div class="menu-item-price">¥ <span>5,500〜</span></div>
+            </div>
+          </div>
+          <div class="menu-item" style="padding:0; overflow:hidden;">
+            <img src="images/リフレクソロジー.png" alt="リフレクソロジー" style="width:100%; height:170px; object-fit:cover; display:block; filter:brightness(0.82);">
+            <div style="padding:1.5rem 1.8rem 1.8rem;">
+              <div class="menu-item-name">リフレクソロジー</div>
+              <div class="menu-item-desc">手・足の反射区を刺激する東洋医学的ケア。各臓器・器官への間接的なアプローチで体全体のバランスを整えます。疲労回復・自律神経の安定・免疫力アップに。フットはフットバス付きでよりリラックスした状態で施術します。</div>
+              <div style="display:flex; flex-direction:column; gap:0.3rem; margin-top:0.5rem;">
+                <div style="font-size:0.72rem; color:var(--text-muted); font-family:var(--font-jp-sans);">ハンドリフレクソロジー <span style="font-family:var(--font-en-serif); font-size:1.2rem; color:var(--gold-light);">¥4,400</span></div>
+                <div style="font-size:0.72rem; color:var(--text-muted); font-family:var(--font-jp-sans);">フットリフレクソロジー（フットバス付） <span style="font-family:var(--font-en-serif); font-size:1.2rem; color:var(--gold-light);">¥5,500</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 脱毛 -->
+        <div class="menu-section-title">フォトライト脱毛（レディース）</div>
+        <div class="menu-mid-banner" style="height:220px; margin-bottom:2rem;">
+          <img src="images/マシン脱毛.png" alt="フォトライト脱毛">
+          <div class="menu-mid-banner-text">
+            <p>フォトライト脱毛で、セルフケア不要の<br>なめらか素肌へ</p>
+          </div>
+        </div>
+        <div class="menu-grid">
+          <div class="menu-item">
+            <span class="menu-item-tag">お得</span>
+            <div class="menu-item-name">全身脱毛（VIO含む）</div>
+            <div class="menu-item-desc">顔・全身・VIOまで一度にまとめてフォトライト脱毛でケア。ジェル不要・冷却機能付きで肌への負担を最小限に。産毛から濃い毛まで対応し、施術後はつるっとなめらかな肌に。最もコスパの高い全身コース。</div>
+            <div class="menu-item-price">¥ <span>28,000</span></div>
+            <div style="margin-top:0.8rem; padding-top:0.8rem; border-top:1px solid var(--border-gold);">
+              <p style="font-size:0.6rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.4rem; font-family:var(--font-en-serif);">INCLUDED PARTS</p>
+              <p style="font-size:0.65rem; color:var(--cream); line-height:2; font-family:var(--font-jp-sans); font-weight:300;">うなじ・両わき・両腕・両手甲・両手指・胸・お腹全体・背中全体・おしり・両脚・両足甲・両足指・VIO（V/I/Oライン）</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name">全身脱毛（VIO除く）</div>
+            <div class="menu-item-desc">顔・全身をまとめてフォトライト脱毛。ジェル不要で肌への刺激が少なく、施術後すぐにメイクや日常生活が可能。継続することで徐々に毛が薄くなり、お手入れがぐっと楽になります。</div>
+            <div class="menu-item-price">¥ <span>23,000</span></div>
+            <div style="margin-top:0.8rem; padding-top:0.8rem; border-top:1px solid var(--border-gold);">
+              <p style="font-size:0.6rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.4rem; font-family:var(--font-en-serif);">INCLUDED PARTS</p>
+              <p style="font-size:0.65rem; color:var(--cream); line-height:2; font-family:var(--font-jp-sans); font-weight:300;">うなじ・両わき・両腕・両手甲・両手指・胸・お腹全体・背中全体・おしり・両脚・両足甲・両足指</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name">シェービング</div>
+            <div class="menu-item-desc">施術前にご自身でシェービングしてご来店いただくのが基本ですが、背中・うなじ・VIOなど自分では処理しにくい部位はこちらでお任せください。</div>
+            <div class="menu-item-price">¥ <span>1,100</span><span style="font-size:0.65rem; color:var(--text-muted); margin-left:0.4rem; font-family:var(--font-jp-sans);">/ 1部位</span></div>
+            <div style="margin-top:1.4rem; padding-top:1.2rem; border-top:1px solid var(--border-gold);">
+              <div class="menu-item-name" style="font-size:0.95rem;">1ショット（仕上げ用）</div>
+              <div class="menu-item-desc" style="margin-top:0.5rem;">他店での脱毛後、少量だけ残ってしまった部分への特別価格施術。MAX20ショットまで。<br><span style="font-size:0.72rem; color:var(--gold); letter-spacing:0.05em;">※ 施術ショット数はカウンセリングにて決定</span></div>
+              <div class="menu-item-price">¥ <span>220〜</span></div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name">Lパーツ脱毛</div>
+            <div class="menu-item-desc">脚（ひざ上/下）・腕全体など広い範囲を対象としたパーツ脱毛。気になる部位を集中的にケアしたい方に。半袖・スカートが楽しみになります。</div>
+            <div class="menu-item-price">¥ <span>8,800</span><span style="font-size:0.65rem; color:var(--text-muted); margin-left:0.4rem; font-family:var(--font-jp-sans);">/ 1部位</span></div>
+            <div style="margin-top:0.8rem; padding-top:0.8rem; border-top:1px solid var(--border-gold);">
+              <p style="font-size:0.6rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.4rem; font-family:var(--font-en-serif);">PARTS（各1部位）</p>
+              <p style="font-size:0.65rem; color:var(--cream); line-height:2; font-family:var(--font-jp-sans); font-weight:300;">顔全体・両腕・胸・背中上・背中下・おしり・両ひざ上・両ひざ下・VIOセット</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name">Mパーツ脱毛</div>
+            <div class="menu-item-desc">ワキ・ひじ下などの中程度のパーツ脱毛。ワキはニオイケアにも効果的で、日常のお手入れが格段に楽になります。</div>
+            <div class="menu-item-price">¥ <span>5,500</span><span style="font-size:0.65rem; color:var(--text-muted); margin-left:0.4rem; font-family:var(--font-jp-sans);">/ 1部位</span></div>
+            <div style="margin-top:0.8rem; padding-top:0.8rem; border-top:1px solid var(--border-gold);">
+              <p style="font-size:0.6rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.4rem; font-family:var(--font-en-serif);">PARTS（各1部位）</p>
+              <p style="font-size:0.65rem; color:var(--cream); line-height:2; font-family:var(--font-jp-sans); font-weight:300;">うなじ・首・肩・デコルテ・おへそ上・おへそ下・両ひじ上・両ひじ下</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name">Sパーツ脱毛</div>
+            <div class="menu-item-desc">指・鼻下・眉下など小さな部位のピンポイント脱毛。ちょっと気になる箇所にサッとご利用いただける手軽なコース。</div>
+            <div class="menu-item-price">¥ <span>3,300</span><span style="font-size:0.65rem; color:var(--text-muted); margin-left:0.4rem; font-family:var(--font-jp-sans);">/ 1部位</span></div>
+            <div style="margin-top:0.8rem; padding-top:0.8rem; border-top:1px solid var(--border-gold);">
+              <p style="font-size:0.6rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.4rem; font-family:var(--font-en-serif);">PARTS（各1部位）</p>
+              <p style="font-size:0.65rem; color:var(--cream); line-height:2; font-family:var(--font-jp-sans); font-weight:300;">額・眉周り・頬・口周り・あご・もみあげ・乳輪周り・両わき・おへそ周り・Vライン・Iライン・Oライン・両ひざ・両手甲・両手指・両足甲・両足指</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- WAX -->
+        <div class="menu-section-title">国産WAX脱毛</div>
+        <div class="menu-mid-banner" style="height:220px; margin-bottom:2rem;">
+          <img src="images/WAX脱毛.png" alt="国産WAX脱毛">
+          <div class="menu-mid-banner-text">
+            <p>思わず眠ってしまうくらい<br>「痛くない」リラクゼーションワックス脱毛</p>
+          </div>
+        </div>
+        <div style="margin:-0.5rem 0 2.5rem; padding:1.4rem 1.8rem; border:1px solid var(--border-gold); background:rgba(212,192,148,0.04);">
+          <p style="font-size:0.78rem; color:var(--text-secondary); line-height:2; font-family:var(--font-jp-sans); font-weight:300;">防腐剤や石油由来成分などを一切使用せず、有効成分の効果効能を最大限に活かした処方設計で開発された国産WAXです。角質を和らげて毛穴を広げるローションや、痛み軽減成分を配合したジェルを採用することで、<strong style="color:var(--gold-pale); font-weight:400;">思わず眠ってしまうくらいリラックスできる「痛くない」ワックス脱毛</strong>を実現しました。スキンケア効果を兼ね備えた、新しい「美肌をつくるリラクゼーションワックス脱毛」です。</p>
+        </div>
+        <div class="menu-grid">
+
+          <!-- ボディWAX -->
+          <div class="menu-item">
+            <div class="menu-item-name">国産WAX脱毛 ボディ</div>
+            <div class="menu-item-desc">脚・腕・背中・胸・お腹・わきなど全身のボディ部位に対応。産毛から太い毛まで施術可能で、抜いた直後からつるっとなめらかな肌に。</div>
+            <div class="menu-item-price">¥ <span>3,850〜</span></div>
+            <div style="margin-top:0.8rem; padding-top:0.8rem; border-top:1px solid var(--border-gold);">
+              <p style="font-size:0.6rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.6rem; font-family:var(--font-en-serif);">PRICE LIST</p>
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:0; font-size:0.65rem; font-family:var(--font-jp-sans);">
+                <div style="display:flex; justify-content:space-between; padding:3px 8px 3px 0; border-bottom:1px solid rgba(212,192,148,0.1);"><span style="color:var(--cream);">両ひじ上</span><span style="color:var(--gold-light); font-family:var(--font-en-serif); font-size:0.88rem;">¥4,400</span></div>
+                <div style="display:flex; justify-content:space-between; padding:3px 0 3px 8px; border-bottom:1px solid rgba(212,192,148,0.1);"><span style="color:var(--cream);">両ひじ下</span><span style="color:var(--gold-light); font-family:var(--font-en-serif); font-size:0.88rem;">¥4,400</span></div>
+                <div style="display:flex; justify-content:space-between; padding:3px 8px 3px 0; border-bottom:1px solid rgba(212,192,148,0.1);"><span style="color:var(--gold-pale);">両うで ALL</span><span style="color:var(--gold-light); font-family:var(--font-en-serif); font-size:0.88rem;">¥8,000</span></div><div style="border-bottom:1px solid rgba(212,192,148,0.1);"></div>
+                <div style="display:flex; justify-content:space-between; padding:3px 8px 3px 0; border-bottom:1px solid rgba(212,192,148,0.1);"><span style="color:var(--cream);">両ひざ上</span><span style="color:var(--gold-light); font-family:var(--font-en-serif); font-size:0.88rem;">¥5,500</span></div>
+                <div style="display:flex; justify-content:space-between; padding:3px 0 3px 8px; border-bottom:1px solid rgba(212,192,148,0.1);"><span style="color:var(--cream);">両ひざ下</span><span style="color:var(--gold-light); font-family:var(--font-en-serif); font-size:0.88rem;">¥5,500</span></div>
+                <div style="display:flex; justify-content:space-between; padding:3px 8px 3px 0; border-bottom:1px solid rgba(212,192,148,0.1);"><span style="color:var(--gold-pale);">両あし ALL</span><span style="color:var(--gold-light); font-family:var(--font-en-serif); font-size:0.88rem;">¥10,000</span></div><div style="border-bottom:1px solid rgba(212,192,148,0.1);"></div>
+                <div style="display:flex; justify-content:space-between; padding:3px 8px 3px 0; border-bottom:1px solid rgba(212,192,148,0.1);"><span style="color:var(--cream);">背中上部</span><span style="color:var(--gold-light); font-family:var(--font-en-serif); font-size:0.88rem;">¥4,400</span></div>
+                <div style="display:flex; justify-content:space-between; padding:3px 0 3px 8px; border-bottom:1px solid rgba(212,192,148,0.1);"><span style="color:var(--cream);">背中下部</span><span style="color:var(--gold-light); font-family:var(--font-en-serif); font-size:0.88rem;">¥4,400</span></div>
+                <div style="display:flex; justify-content:space-between; padding:3px 8px 3px 0; border-bottom:1px solid rgba(212,192,148,0.1);"><span style="color:var(--gold-pale);">背中 ALL</span><span style="color:var(--gold-light); font-family:var(--font-en-serif); font-size:0.88rem;">¥8,000</span></div><div style="border-bottom:1px solid rgba(212,192,148,0.1);"></div>
+                <div style="display:flex; justify-content:space-between; padding:3px 8px 3px 0; border-bottom:1px solid rgba(212,192,148,0.1);"><span style="color:var(--cream);">デコルテ</span><span style="color:var(--gold-light); font-family:var(--font-en-serif); font-size:0.88rem;">¥3,850</span></div>
+                <div style="display:flex; justify-content:space-between; padding:3px 0 3px 8px; border-bottom:1px solid rgba(212,192,148,0.1);"><span style="color:var(--cream);">両ワキ</span><span style="color:var(--gold-light); font-family:var(--font-en-serif); font-size:0.88rem;">¥3,850</span></div>
+                <div style="display:flex; justify-content:space-between; padding:3px 8px 3px 0; border-bottom:1px solid rgba(212,192,148,0.1);"><span style="color:var(--cream);">胸</span><span style="color:var(--gold-light); font-family:var(--font-en-serif); font-size:0.88rem;">¥4,400</span></div>
+                <div style="display:flex; justify-content:space-between; padding:3px 0 3px 8px; border-bottom:1px solid rgba(212,192,148,0.1);"><span style="color:var(--cream);">へそ上</span><span style="color:var(--gold-light); font-family:var(--font-en-serif); font-size:0.88rem;">¥4,400</span></div>
+                <div style="display:flex; justify-content:space-between; padding:3px 8px 3px 0; border-bottom:1px solid rgba(212,192,148,0.1);"><span style="color:var(--cream);">へそ下</span><span style="color:var(--gold-light); font-family:var(--font-en-serif); font-size:0.88rem;">¥4,400</span></div>
+                <div style="display:flex; justify-content:space-between; padding:3px 0 3px 8px;"><span style="color:var(--cream);">うなじ</span><span style="color:var(--gold-light); font-family:var(--font-en-serif); font-size:0.88rem;">¥3,850</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- フェイス・VIO WAX -->
+          <div class="menu-item">
+            <div class="menu-item-name">国産WAX脱毛 フェイス・VIO</div>
+            <div class="menu-item-desc">顔周り・VIOなど繊細な部位にも対応。眉の形成・フェイシャル産毛・VIOのデザインを丁寧に整えます。VIOセットはV・I・Oの3か所がまとめてお得になるセット料金です。</div>
+            <div class="menu-item-price">¥ <span>2,200〜</span></div>
+            <div style="margin-top:0.8rem; padding-top:0.8rem; border-top:1px solid var(--border-gold);">
+              <p style="font-size:0.6rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.6rem; font-family:var(--font-en-serif);">PRICE LIST</p>
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:0; font-size:0.65rem; font-family:var(--font-jp-sans);">
+                <div style="display:flex; justify-content:space-between; padding:3px 8px 3px 0; border-bottom:1px solid rgba(212,192,148,0.1);"><span style="color:var(--gold-pale);">顔全体</span><span style="color:var(--gold-light); font-family:var(--font-en-serif); font-size:0.88rem;">¥8,800</span></div><div style="border-bottom:1px solid rgba(212,192,148,0.1);"></div>
+                <div style="display:flex; justify-content:space-between; padding:3px 8px 3px 0; border-bottom:1px solid rgba(212,192,148,0.1);"><span style="color:var(--cream);">額</span><span style="color:var(--gold-light); font-family:var(--font-en-serif); font-size:0.88rem;">¥2,200</span></div>
+                <div style="display:flex; justify-content:space-between; padding:3px 0 3px 8px; border-bottom:1px solid rgba(212,192,148,0.1);"><span style="color:var(--cream);">眉周り</span><span style="color:var(--gold-light); font-family:var(--font-en-serif); font-size:0.88rem;">¥2,200</span></div>
+                <div style="display:flex; justify-content:space-between; padding:3px 8px 3px 0; border-bottom:1px solid rgba(212,192,148,0.1);"><span style="color:var(--cream);">頬</span><span style="color:var(--gold-light); font-family:var(--font-en-serif); font-size:0.88rem;">¥2,200</span></div>
+                <div style="display:flex; justify-content:space-between; padding:3px 0 3px 8px; border-bottom:1px solid rgba(212,192,148,0.1);"><span style="color:var(--cream);">口周り</span><span style="color:var(--gold-light); font-family:var(--font-en-serif); font-size:0.88rem;">¥2,200</span></div>
+                <div style="display:flex; justify-content:space-between; padding:3px 8px 3px 0; border-bottom:1px solid rgba(212,192,148,0.1);"><span style="color:var(--cream);">あご</span><span style="color:var(--gold-light); font-family:var(--font-en-serif); font-size:0.88rem;">¥2,200</span></div><div style="border-bottom:1px solid rgba(212,192,148,0.1);"></div>
+                <div style="display:flex; justify-content:space-between; padding:3px 8px 3px 0; border-bottom:1px solid rgba(212,192,148,0.1);"><span style="color:var(--cream);">Vライン</span><span style="color:var(--gold-light); font-family:var(--font-en-serif); font-size:0.88rem;">¥3,300</span></div>
+                <div style="display:flex; justify-content:space-between; padding:3px 0 3px 8px; border-bottom:1px solid rgba(212,192,148,0.1);"><span style="color:var(--cream);">Iライン</span><span style="color:var(--gold-light); font-family:var(--font-en-serif); font-size:0.88rem;">¥3,300</span></div>
+                <div style="display:flex; justify-content:space-between; padding:3px 8px 3px 0; border-bottom:1px solid rgba(212,192,148,0.1);"><span style="color:var(--cream);">Oライン</span><span style="color:var(--gold-light); font-family:var(--font-en-serif); font-size:0.88rem;">¥3,300</span></div><div style="border-bottom:1px solid rgba(212,192,148,0.1);"></div>
+                <div style="display:flex; justify-content:space-between; padding:3px 8px 3px 0; border-bottom:1px solid rgba(212,192,148,0.1);"><span style="color:var(--gold-pale);">VIOセット</span><span style="color:var(--gold-light); font-family:var(--font-en-serif); font-size:0.88rem;">¥9,000</span></div>
+                <div style="display:flex; justify-content:space-between; padding:3px 0 3px 8px;"><span style="color:var(--gold-pale);">VIOデザインセット</span><span style="color:var(--gold-light); font-family:var(--font-en-serif); font-size:0.88rem;">¥10,000</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ミニパーツWAX -->
+          <div class="menu-item">
+            <div class="menu-item-name">国産WAX脱毛 ミニパーツ</div>
+            <div class="menu-item-desc">鼻毛・手足の甲・指など小さな部位のWAX脱毛。ちょっと気になる箇所にサッとご利用いただける手軽なコースです。</div>
+            <div class="menu-item-price">¥ <span>1,650</span></div>
+            <div style="margin-top:0.8rem; padding-top:0.8rem; border-top:1px solid var(--border-gold);">
+              <p style="font-size:0.6rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.6rem; font-family:var(--font-en-serif);">PRICE LIST</p>
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:0; font-size:0.65rem; font-family:var(--font-jp-sans);">
+                <div style="display:flex; justify-content:space-between; padding:3px 8px 3px 0; border-bottom:1px solid rgba(212,192,148,0.1);"><span style="color:var(--cream);">鼻毛</span><span style="color:var(--gold-light); font-family:var(--font-en-serif); font-size:0.88rem;">¥1,650</span></div>
+                <div style="display:flex; justify-content:space-between; padding:3px 0 3px 8px; border-bottom:1px solid rgba(212,192,148,0.1);"><span style="color:var(--cream);">手の甲</span><span style="color:var(--gold-light); font-family:var(--font-en-serif); font-size:0.88rem;">¥1,650</span></div>
+                <div style="display:flex; justify-content:space-between; padding:3px 8px 3px 0; border-bottom:1px solid rgba(212,192,148,0.1);"><span style="color:var(--cream);">手指</span><span style="color:var(--gold-light); font-family:var(--font-en-serif); font-size:0.88rem;">¥1,650</span></div>
+                <div style="display:flex; justify-content:space-between; padding:3px 0 3px 8px; border-bottom:1px solid rgba(212,192,148,0.1);"><span style="color:var(--cream);">足の甲</span><span style="color:var(--gold-light); font-family:var(--font-en-serif); font-size:0.88rem;">¥1,650</span></div>
+                <div style="display:flex; justify-content:space-between; padding:3px 8px 3px 0;"><span style="color:var(--cream);">足指</span><span style="color:var(--gold-light); font-family:var(--font-en-serif); font-size:0.88rem;">¥1,650</span></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- よもぎ蒸し -->
+        <div class="menu-section-title">水素×黄土漢方よもぎ蒸し</div>
+        <div class="menu-feature-card">
+          <img class="menu-feature-img" src="images/よもぎ蒸し.png" alt="よもぎ蒸し">
+          <div class="menu-feature-body">
+            <span class="menu-item-tag">東洋医学</span>
+            <div class="menu-item-name">水素×黄土漢方よもぎ蒸し</div>
+            <div class="menu-item-desc">韓国に600年以上伝わる伝統的な温熱療法。よもぎなど厳選された漢方ハーブの蒸気が、女性の会陰部から直接全身に浸透し、子宮・卵巣を内側からじんわり温めます。体温上昇・免疫力アップ・代謝促進・冷え取り・デトックス・リラクゼーション効果が期待でき、生理不順・更年期・不妊症・女性特有のお悩み改善にも広く取り入れられています。<br><br>
+              体内で水素を発生させながら行う、当サロン独自のスペシャルケア。施術後の病みつきになるスッキリ感とツルスベ肌にリピーター続出の大人気メニューです。</div>
+            <div style="margin-top:1.2rem; display:flex; flex-direction:column; gap:0.4rem;">
+              <div style="display:flex; align-items:baseline; gap:0.5rem;">
+                <span style="font-size:0.65rem; color:var(--gold); letter-spacing:0.1em; font-family:var(--font-en-serif);">45 min</span>
+                <span class="menu-item-price" style="margin:0;">¥ <span>4,950</span></span>
+              </div>
+              <div style="display:flex; align-items:baseline; gap:0.5rem;">
+                <span style="font-size:0.65rem; color:var(--gold-pale); letter-spacing:0.08em; font-family:var(--font-jp-sans);">✤ 初回体験</span>
+                <span class="menu-item-price" style="margin:0;">¥ <span>4,400</span></span>
+              </div>
+            </div>
+            <!-- 回数券プラン -->
+            <div style="margin-top:1.4rem; padding:1rem 1.2rem; border:1px solid var(--border-gold); background:rgba(212,192,148,0.04); border-radius:4px;">
+              <p style="font-size:0.6rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.6rem; font-family:var(--font-en-serif);">COURSE PLAN</p>
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <div>
+                  <span style="font-size:0.85rem; color:var(--gold-pale); font-family:var(--font-jp-sans); font-weight:500;">回数券 3回利用券</span>
+                  <span style="display:block; font-size:0.75rem; color:var(--cream); margin-top:0.3rem; font-family:var(--font-jp-sans);">1回あたり ¥3,666 ／ 有効期限1年</span>
+                </div>
+                <span style="font-size:1.15rem; color:var(--gold-light); font-family:var(--font-en-serif); font-weight:600;">¥11,000</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 耳ツボ -->
+        <div class="menu-section-title">耳ツボジュエリー</div>
+        <div class="menu-feature-card">
+          <img class="menu-feature-img" src="images/耳ツボジュエリー.png" alt="耳ツボジュエリー">
+          <div class="menu-feature-body">
+            <span class="menu-item-tag">人気</span>
+            <div class="menu-item-name">耳ツボジュエリー</div>
+            <p style="font-size:0.7rem; color:var(--gold-pale); font-style:italic; margin:0.5rem 0 0.8rem; font-family:var(--font-en-serif); letter-spacing:0.05em;">「耳を見ればその人の身体の悪いところが分かる」</p>
+            <div class="menu-item-desc">耳には全身の臓器・器官に対応する110個のツボが集中しています。スワロフスキー・チタン・金・ジルコンファインセラミック粒のシールを使い、専用スティックで的確にツボを刺激。施術は痛みなく簡単で、1〜2週間そのまま着けていただけます。穴を開けずにアクセサリー感覚でお楽しみいただける、おしゃれで手軽な東洋医学ケアです。</div>
+            <div class="menu-item-price" style="margin-top:1rem;">¥ <span>5,500</span><span style="font-size:0.65rem; color:var(--text-muted); margin-left:0.5rem; font-family:var(--font-jp-sans);">10粒まで付け放題</span></div>
+            <!-- 効果カテゴリ -->
+            <div style="margin-top:1.4rem; display:grid; grid-template-columns:1fr 1fr; gap:0.7rem;">
+              <div style="padding:0.8rem; border:1px solid var(--border-gold); background:rgba(212,192,148,0.04); border-radius:4px;">
+                <p style="font-size:0.6rem; color:var(--gold); letter-spacing:0.12em; margin-bottom:0.4rem; font-family:var(--font-en-serif);">RELAXATION</p>
+                <p style="font-size:0.68rem; color:var(--cream); line-height:1.7; font-family:var(--font-jp-sans); font-weight:300;">情緒不安定・不眠</p>
+              </div>
+              <div style="padding:0.8rem; border:1px solid var(--border-gold); background:rgba(212,192,148,0.04); border-radius:4px;">
+                <p style="font-size:0.6rem; color:var(--gold); letter-spacing:0.12em; margin-bottom:0.4rem; font-family:var(--font-en-serif);">BEAUTY</p>
+                <p style="font-size:0.68rem; color:var(--cream); line-height:1.7; font-family:var(--font-jp-sans); font-weight:300;">美肌・リフトアップ・ダイエット</p>
+              </div>
+              <div style="padding:0.8rem; border:1px solid var(--border-gold); background:rgba(212,192,148,0.04); border-radius:4px;">
+                <p style="font-size:0.6rem; color:var(--gold); letter-spacing:0.12em; margin-bottom:0.4rem; font-family:var(--font-en-serif);">HEALTH</p>
+                <p style="font-size:0.68rem; color:var(--cream); line-height:1.7; font-family:var(--font-jp-sans); font-weight:300;">目の疲れ・頭痛・肩こり・代謝アップ</p>
+              </div>
+              <div style="padding:0.8rem; border:1px solid var(--border-gold); background:rgba(212,192,148,0.04); border-radius:4px;">
+                <p style="font-size:0.6rem; color:var(--gold); letter-spacing:0.12em; margin-bottom:0.4rem; font-family:var(--font-en-serif);">WOMEN'S CARE</p>
+                <p style="font-size:0.68rem; color:var(--cream); line-height:1.7; font-family:var(--font-jp-sans); font-weight:300;">生理痛・むくみ・冷え・便秘</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="menu-note">
+          ※ 表示価格は全て税込です。<br>
+          ※ カウンセリング（無料）を行った上でお客様に最適なメニューをご提案いたします。<br>
+          ※ 複数メニューの組み合わせも可能です。ご希望の施術をお気軽にご相談ください。<br>
+          ※ ご不明な点はLINEまたはお問い合わせフォームよりいつでもどうぞ。
+        </p>
+      </div>
+
+      <!-- ===== SALON CAR MENU ===== -->
+      <div class="menu-panel" data-panel="saloncar" id="saloncar">
+
+        <!-- Panel Hero -->
+        <div class="menu-panel-hero">
+          <img src="images/TOPサロンカーメニューページ用画像.png" alt="移動サロンカーメニュー">
+          <div class="menu-panel-hero-content">
+            <p class="menu-panel-hero-en">Mobile Salon Service</p>
+            <h2 class="menu-panel-hero-title">Salon Car Menu</h2>
+            <p class="menu-panel-hero-subtitle">本格サロンカーがあなたのもとへ伺います</p>
+          </div>
+        </div>
+
+        <div style="text-align:center; margin-bottom:3rem;">
+          <p class="section-subtitle" style="font-weight:300; line-height:2;">
+            本格サロン設備を搭載した移動サロンカーが、ご自宅・職場・ご希望の場所へ直接伺います。<br>
+            性別・年齢問わずプライベート空間で気軽にプロの施術をご体験ください。<br>
+            <span style="font-size:0.8rem; color:var(--gold);">施術合計¥11,000以上で出動可能。明石大久保駅から片道20km以内は出張費無料。</span>
+          </p>
+        </div>
+
+        <div class="menu-section-title">メンズ脱毛 / Epilation MEN</div>
+        <div style="overflow-x:auto; margin-bottom:2.5rem;">
+          <table style="width:100%; border-collapse:collapse; font-size:0.88rem;">
+            <thead>
+              <tr style="border-bottom:1px solid var(--border-gold);">
+                <th style="text-align:left; padding:12px 16px; color:var(--gold); font-weight:400; letter-spacing:0.08em;">メニュー</th>
+                <th style="text-align:right; padding:12px 16px; color:var(--gold); font-weight:400;">OneTime</th>
+                <th style="text-align:right; padding:12px 16px; color:var(--gold); font-weight:400; white-space:nowrap;">6回分現金一括<br><span style="font-size:0.75em; font-weight:300; opacity:0.85;">10% OFF</span></th>
+                <th style="text-align:right; padding:12px 16px; color:var(--gold); font-weight:400; white-space:nowrap;">Subscription<br><span style="font-size:0.75em; font-weight:300; opacity:0.85;">（1ヶ月あたり・5% OFF）</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td style="padding:12px 16px; color:var(--cream);">全身（VIO含む）</td><td style="text-align:right; padding:12px 16px; color:var(--text-secondary);">¥44,000</td><td style="text-align:right; padding:12px 16px; color:var(--gold-pale);">¥237,600<br><span style="font-size:0.78em; opacity:0.75;">（¥39,600/回）</span></td><td style="text-align:right; padding:12px 16px; color:var(--gold-pale);">¥41,800</td></tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td style="padding:12px 16px; color:var(--cream);">全身（VIO除く）</td><td style="text-align:right; padding:12px 16px; color:var(--text-secondary);">¥33,000</td><td style="text-align:right; padding:12px 16px; color:var(--gold-pale);">¥178,200<br><span style="font-size:0.78em; opacity:0.75;">（¥29,700/回）</span></td><td style="text-align:right; padding:12px 16px; color:var(--gold-pale);">¥31,400</td></tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td style="padding:12px 16px; color:var(--cream);">ヒゲセット</td><td style="text-align:right; padding:12px 16px; color:var(--text-secondary);">¥19,800</td><td style="text-align:right; padding:12px 16px; color:var(--gold-pale);">¥106,920<br><span style="font-size:0.78em; opacity:0.75;">（¥17,820/回）</span></td><td style="text-align:right; padding:12px 16px; color:var(--gold-pale);">¥18,800</td></tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td style="padding:12px 16px; color:var(--cream);">Lパーツ</td><td style="text-align:right; padding:12px 16px; color:var(--text-secondary);">¥16,500</td><td style="text-align:right; padding:12px 16px; color:var(--gold-pale);">¥89,100<br><span style="font-size:0.78em; opacity:0.75;">（¥14,850/回）</span></td><td style="text-align:right; padding:12px 16px; color:var(--gold-pale);">¥15,700</td></tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td style="padding:12px 16px; color:var(--cream);">Mパーツ</td><td style="text-align:right; padding:12px 16px; color:var(--text-secondary);">¥11,000</td><td style="text-align:right; padding:12px 16px; color:var(--gold-pale);">¥59,400<br><span style="font-size:0.78em; opacity:0.75;">（¥9,900/回）</span></td><td style="text-align:right; padding:12px 16px; color:var(--gold-pale);">¥10,500</td></tr>
+              <tr><td style="padding:12px 16px; color:var(--cream);">Sパーツ</td><td style="text-align:right; padding:12px 16px; color:var(--text-secondary);">¥5,500</td><td style="text-align:right; padding:12px 16px; color:var(--gold-pale);">¥29,700<br><span style="font-size:0.78em; opacity:0.75;">（¥4,950/回）</span></td><td style="text-align:right; padding:12px 16px; color:var(--gold-pale);">¥5,200</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="menu-section-title">レディース脱毛 / Epilation WOMEN</div>
+        <div style="overflow-x:auto; margin-bottom:2.5rem;">
+          <table style="width:100%; border-collapse:collapse; font-size:0.88rem;">
+            <thead>
+              <tr style="border-bottom:1px solid var(--border-gold);">
+                <th style="text-align:left; padding:12px 16px; color:var(--gold); font-weight:400; letter-spacing:0.08em;">メニュー</th>
+                <th style="text-align:right; padding:12px 16px; color:var(--gold); font-weight:400;">OneTime</th>
+                <th style="text-align:right; padding:12px 16px; color:var(--gold); font-weight:400; white-space:nowrap;">6回分現金一括<br><span style="font-size:0.75em; font-weight:300; opacity:0.85;">10% OFF</span></th>
+                <th style="text-align:right; padding:12px 16px; color:var(--gold); font-weight:400; white-space:nowrap;">Subscription<br><span style="font-size:0.75em; font-weight:300; opacity:0.85;">（1ヶ月あたり・5% OFF）</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td style="padding:12px 16px; color:var(--cream);">全身（VIO含む）</td><td style="text-align:right; padding:12px 16px; color:var(--text-secondary);">¥35,000</td><td style="text-align:right; padding:12px 16px; color:var(--gold-pale);">¥189,000<br><span style="font-size:0.78em; opacity:0.75;">（¥31,500/回）</span></td><td style="text-align:right; padding:12px 16px; color:var(--gold-pale);">¥33,300</td></tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td style="padding:12px 16px; color:var(--cream);">全身（VIO除く）</td><td style="text-align:right; padding:12px 16px; color:var(--text-secondary);">¥28,000</td><td style="text-align:right; padding:12px 16px; color:var(--gold-pale);">¥151,200<br><span style="font-size:0.78em; opacity:0.75;">（¥25,200/回）</span></td><td style="text-align:right; padding:12px 16px; color:var(--gold-pale);">¥26,600</td></tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td style="padding:12px 16px; color:var(--cream);">VIOセット</td><td style="text-align:right; padding:12px 16px; color:var(--text-secondary);">¥9,000</td><td style="text-align:right; padding:12px 16px; color:var(--gold-pale);">¥48,600<br><span style="font-size:0.78em; opacity:0.75;">（¥8,100/回）</span></td><td style="text-align:right; padding:12px 16px; color:var(--gold-pale);">¥8,600</td></tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td style="padding:12px 16px; color:var(--cream);">Lパーツ</td><td style="text-align:right; padding:12px 16px; color:var(--text-secondary);">¥11,000</td><td style="text-align:right; padding:12px 16px; color:var(--gold-pale);">¥59,400<br><span style="font-size:0.78em; opacity:0.75;">（¥9,900/回）</span></td><td style="text-align:right; padding:12px 16px; color:var(--gold-pale);">¥10,500</td></tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td style="padding:12px 16px; color:var(--cream);">Mパーツ</td><td style="text-align:right; padding:12px 16px; color:var(--text-secondary);">¥6,500</td><td style="text-align:right; padding:12px 16px; color:var(--gold-pale);">¥35,100<br><span style="font-size:0.78em; opacity:0.75;">（¥5,850/回）</span></td><td style="text-align:right; padding:12px 16px; color:var(--gold-pale);">¥6,200</td></tr>
+              <tr><td style="padding:12px 16px; color:var(--cream);">Sパーツ</td><td style="text-align:right; padding:12px 16px; color:var(--text-secondary);">¥3,500</td><td style="text-align:right; padding:12px 16px; color:var(--gold-pale);">¥18,900<br><span style="font-size:0.78em; opacity:0.75;">（¥3,150/回）</span></td><td style="text-align:right; padding:12px 16px; color:var(--gold-pale);">¥3,300</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- 車内イメージバナー -->
+        <div class="menu-mid-banner">
+          <img src="images/car-interior-1.jpg" alt="サロンカー車内">
+          <div class="menu-mid-banner-text">
+            <p>完全プライベートな車内空間で<br>本格施術をご体験ください</p>
+          </div>
+        </div>
+
+        <div class="menu-section-title">ヘッド・ボディケア / Head &amp; Body</div>
+        <div style="overflow-x:auto; margin-bottom:2.5rem;">
+          <table style="width:100%; border-collapse:collapse; font-size:0.88rem;">
+            <thead>
+              <tr style="border-bottom:1px solid var(--border-gold);">
+                <th style="text-align:left; padding:12px 16px; color:var(--gold); font-weight:400; letter-spacing:0.08em;">メニュー</th>
+                <th style="text-align:right; padding:12px 16px; color:var(--gold); font-weight:400;">OneTime</th>
+                <th style="text-align:right; padding:12px 16px; color:var(--gold); font-weight:400; white-space:nowrap;">6回分現金一括<br><span style="font-size:0.75em; font-weight:300; opacity:0.85;">10% OFF</span></th>
+                <th style="text-align:right; padding:12px 16px; color:var(--gold); font-weight:400; white-space:nowrap;">Subscription<br><span style="font-size:0.75em; font-weight:300; opacity:0.85;">（1ヶ月あたり・5% OFF）</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td style="padding:12px 16px; color:var(--cream);">クラニアルメソッド®（頭蓋骨調整）</td><td style="text-align:right; padding:12px 16px; color:var(--text-secondary);">¥11,000</td><td style="text-align:right; padding:12px 16px; color:var(--gold-pale);">¥59,400<br><span style="font-size:0.78em; opacity:0.75;">（¥9,900/回）</span></td><td style="text-align:right; padding:12px 16px; color:var(--gold-pale);">¥10,500</td></tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td style="padding:12px 16px; color:var(--cream);">ボディケア 30分</td><td style="text-align:right; padding:12px 16px; color:var(--text-secondary);">¥5,500</td><td style="text-align:right; padding:12px 16px; color:var(--gold-pale);">¥29,700<br><span style="font-size:0.78em; opacity:0.75;">（¥4,950/回）</span></td><td style="text-align:right; padding:12px 16px; color:var(--gold-pale);">¥5,200</td></tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td style="padding:12px 16px; color:var(--cream);">ボディケア 60分</td><td style="text-align:right; padding:12px 16px; color:var(--text-secondary);">¥11,000</td><td style="text-align:right; padding:12px 16px; color:var(--gold-pale);">¥59,400<br><span style="font-size:0.78em; opacity:0.75;">（¥9,900/回）</span></td><td style="text-align:right; padding:12px 16px; color:var(--gold-pale);">¥10,500</td></tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td style="padding:12px 16px; color:var(--cream);">フォトバストケア</td><td style="text-align:right; padding:12px 16px; color:var(--text-secondary);">¥16,500</td><td style="text-align:right; padding:12px 16px; color:var(--gold-pale);">¥89,100<br><span style="font-size:0.78em; opacity:0.75;">（¥14,850/回）</span></td><td style="text-align:right; padding:12px 16px; color:var(--gold-pale);">¥15,700</td></tr>
+              <tr><td style="padding:12px 16px; color:var(--cream);">カッピング（お流し付き）</td><td style="text-align:right; padding:12px 16px; color:var(--text-secondary);">¥5,500</td><td style="text-align:right; padding:12px 16px; color:var(--gold-pale);">¥29,700<br><span style="font-size:0.78em; opacity:0.75;">（¥4,950/回）</span></td><td style="text-align:right; padding:12px 16px; color:var(--gold-pale);">¥5,200</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="menu-section-title">フェイシャル・イヤーケア / Face &amp; Ear</div>
+        <div style="overflow-x:auto; margin-bottom:2.5rem;">
+          <table style="width:100%; border-collapse:collapse; font-size:0.88rem;">
+            <thead>
+              <tr style="border-bottom:1px solid var(--border-gold);">
+                <th style="text-align:left; padding:12px 16px; color:var(--gold); font-weight:400; letter-spacing:0.08em;">メニュー</th>
+                <th style="text-align:right; padding:12px 16px; color:var(--gold); font-weight:400;">OneTime</th>
+                <th style="text-align:right; padding:12px 16px; color:var(--gold); font-weight:400; white-space:nowrap;">6回分現金一括<br><span style="font-size:0.75em; font-weight:300; opacity:0.85;">10% OFF</span></th>
+                <th style="text-align:right; padding:12px 16px; color:var(--gold); font-weight:400; white-space:nowrap;">Subscription<br><span style="font-size:0.75em; font-weight:300; opacity:0.85;">（1ヶ月あたり・5% OFF）</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td style="padding:12px 16px; color:var(--cream);">フォトフェイシャルコース</td><td style="text-align:right; padding:12px 16px; color:var(--text-secondary);">¥16,500</td><td style="text-align:right; padding:12px 16px; color:var(--gold-pale);">¥89,100<br><span style="font-size:0.78em; opacity:0.75;">（¥14,850/回）</span></td><td style="text-align:right; padding:12px 16px; color:var(--gold-pale);">¥15,700</td></tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td style="padding:12px 16px; color:var(--cream);">ヒト幹細胞フェイシャルコース</td><td style="text-align:right; padding:12px 16px; color:var(--text-secondary);">¥11,000</td><td style="text-align:right; padding:12px 16px; color:var(--gold-pale);">¥59,400<br><span style="font-size:0.78em; opacity:0.75;">（¥9,900/回）</span></td><td style="text-align:right; padding:12px 16px; color:var(--gold-pale);">¥10,500</td></tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td style="padding:12px 16px; color:var(--cream);">耳リフレ・耳ツボジュエリー</td><td style="text-align:right; padding:12px 16px; color:var(--text-secondary);">¥5,500</td><td style="text-align:right; padding:12px 16px; color:var(--gold-pale);">¥29,700<br><span style="font-size:0.78em; opacity:0.75;">（¥4,950/回）</span></td><td style="text-align:right; padding:12px 16px; color:var(--gold-pale);">¥5,200</td></tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td style="padding:12px 16px; color:var(--cream);">フォトフェイシャル＆耳ツボセット</td><td style="text-align:right; padding:12px 16px; color:var(--text-secondary);">¥21,000</td><td style="text-align:right; padding:12px 16px; color:var(--gold-pale);">¥113,400<br><span style="font-size:0.78em; opacity:0.75;">（¥18,900/回）</span></td><td style="text-align:right; padding:12px 16px; color:var(--gold-pale);">¥20,000</td></tr>
+              <tr><td style="padding:12px 16px; color:var(--cream);">ヒト幹フェイシャル＆耳ツボセット</td><td style="text-align:right; padding:12px 16px; color:var(--text-secondary);">¥16,000</td><td style="text-align:right; padding:12px 16px; color:var(--gold-pale);">¥86,400<br><span style="font-size:0.78em; opacity:0.75;">（¥14,400/回）</span></td><td style="text-align:right; padding:12px 16px; color:var(--gold-pale);">¥15,200</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="menu-section-title">ワックス脱毛 / Epilation Waxing</div>
+        <div style="overflow-x:auto; margin-bottom:2.5rem;">
+          <table style="width:100%; border-collapse:collapse; font-size:0.88rem;">
+            <thead>
+              <tr style="border-bottom:1px solid var(--border-gold);">
+                <th style="text-align:left; padding:12px 16px; color:var(--gold); font-weight:400; letter-spacing:0.08em;">メニュー</th>
+                <th style="text-align:right; padding:12px 16px; color:var(--gold); font-weight:400;">料金</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td style="padding:12px 16px; color:var(--cream);">ワキ</td><td style="text-align:right; padding:12px 16px; color:var(--text-secondary);">¥4,000</td></tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td style="padding:12px 16px; color:var(--cream);">眉周り</td><td style="text-align:right; padding:12px 16px; color:var(--text-secondary);">¥3,000</td></tr>
+              <tr><td style="padding:12px 16px; color:var(--cream);">鼻</td><td style="text-align:right; padding:12px 16px; color:var(--text-secondary);">¥2,000</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="menu-note">
+          ※ 表示価格は全て税込です。<br>
+          ※ Subscriptionは月1回×6ヶ月以上の継続プランです。クレジットカード登録が必要です。<br>
+          ※ 解約の場合は2か月前の申告が必要です。<br>
+          ※ WAX脱毛は完全予約制・要相談・サブスク対象外です。<br>
+          ※ 施術合計¥11,000以上で出動可能。<br>
+          ※ 明石大久保駅から片道20km以内は出張費無料。<br>
+          ※ 詳細・エリアのご確認はLINEにてお気軽にご相談ください。
+        </p>
+      </div>
+
+      <!-- ===== SCHOOL MENU ===== -->
+      <div class="menu-panel" data-panel="school" id="school">
+
+        <!-- Panel Hero -->
+        <div class="menu-panel-hero">
+          <img src="images/TOPスクールメニューページ用画像.png" alt="スクールメニュー">
+          <div class="menu-panel-hero-content">
+            <p class="menu-panel-hero-en">Certification School</p>
+            <h2 class="menu-panel-hero-title">School Menu</h2>
+            <p class="menu-panel-hero-subtitle">現役Wellciergeから直接学べる即戦力スクール</p>
+          </div>
+        </div>
+
+        <div style="text-align:center; margin-bottom:3.5rem;">
+          <p class="section-subtitle" style="font-weight:300; line-height:2.2;">
+            資格豊富な現役Wellciergeが、サロンで実際に使っている技術を直接お伝えします。<br>
+            少人数制・マンツーマンで、未経験の方も安心して習得できます。<br>
+            <span style="font-size:0.8rem; color:var(--gold);">副業・独立・スキルアップ・現役サロンオーナーの新メニュー追加に</span>
+          </p>
+        </div>
+
+        <div class="menu-section-title">認定講座一覧</div>
+        <div class="menu-grid">
+          <div class="menu-item" style="padding:0; overflow:hidden;">
+            <img src="images/クラニアルメソッド講座.png" alt="オリジナルクラニアルメソッド講座" style="width:100%; height:auto; display:block;">
+            <div style="padding:1.5rem 1.8rem 1.8rem;">
+              <span class="menu-item-tag">希少技術</span>
+              <div class="menu-item-name">オリジナルクラニアルメソッド®<br>（頭蓋骨調整）</div>
+              <div class="menu-item-desc">「施術後、生まれて初めての感覚です」——そう言っていただけるほど、深く全身に働きかける国内でも希少なオリジナル技法。頭蓋骨へのアプローチで体液循環を根本から整え、不定愁訴・肩こり・むくみ・腰痛・ひざ痛・美容ケアまで幅広いニーズに対応。高単価でもリピートが続く"サロンの看板メニュー"になります。座学（理論・解剖学）・実技デモ・セルフケア・施術練習を網羅したカリキュラムで、テスト合格後にディプロマ発行。「他のサロンにはない技術」で、あなたのサロンの価値と差別化を一段引き上げます。</div>
+              <div class="menu-item-price">¥ <span>165,000</span></div>
+            </div>
+          </div>
+          <div class="menu-item" style="padding:0; overflow:hidden;">
+            <img src="images/耳ツボジュエリー講座.png" alt="オリジナル耳ツボジュエリー講座" style="width:100%; height:auto; display:block;">
+            <div style="padding:1.5rem 1.8rem 1.8rem;">
+              <div style="display:flex; align-items:center; gap:0.4rem; margin-bottom:0.6rem; flex-wrap:wrap;">
+                <span style="display:inline-block; font-size:0.65rem; color:var(--gold); border:1px solid var(--gold); padding:0.15rem 0.6rem; letter-spacing:0.15em; font-family:var(--font-en-serif);">1 DAY</span>
+                <span style="display:inline-block; font-size:0.62rem; color:var(--gold-light); border:1px solid rgba(212,192,148,0.4); padding:0.15rem 0.55rem; letter-spacing:0.08em; font-family:var(--font-jp-sans); font-weight:300;">商材一式付き</span>
+              </div>
+              <div class="menu-item-name">オリジナル耳ツボジュエリー講座</div>
+              <div class="menu-item-desc">「これをつけるだけで体が変わる」——お客様に驚きと感動を届けられる、人気No.1の映えメニューを1日で習得できる認定講座。経穴・反射区の座学で"なぜ効くのか"をしっかり理解し、耳リフレクソロジーと実際のジュエリー施術を実技でマスター。省スペースで単価アップ・リピート促進・新規集客すべてに効果抜群。施術に必要な商材一式が受講料に含まれているので、受講当日から自信を持ってメニューに追加できます。</div>
+              <div class="menu-item-price">¥ <span>110,000</span></div>
+            </div>
+          </div>
+          <div class="menu-item" style="padding:0; overflow:hidden;">
+            <img src="images/カッピング講座.png" alt="オリジナルカッピング講座" style="width:100%; height:auto; display:block;">
+            <div style="padding:1.5rem 1.8rem 1.8rem;">
+              <div style="display:flex; align-items:center; gap:0.4rem; margin-bottom:0.6rem; flex-wrap:wrap;">
+                <span style="display:inline-block; font-size:0.65rem; color:var(--gold); border:1px solid var(--gold); padding:0.15rem 0.6rem; letter-spacing:0.15em; font-family:var(--font-en-serif);">1 DAY</span>
+                <span style="display:inline-block; font-size:0.62rem; color:var(--gold-light); border:1px solid rgba(212,192,148,0.4); padding:0.15rem 0.55rem; letter-spacing:0.08em; font-family:var(--font-jp-sans); font-weight:300;">商材一式付き</span>
+              </div>
+              <div class="menu-item-name">オリジナルカッピング講座</div>
+              <div class="menu-item-desc">「跡がついてるのに、なぜか体が軽い！」——独特の感覚にお客様がハマり、リピートが止まらないと話題のデトックスメニュー。コリ・むくみ・疲労・冷えに直接アプローチする本格的なカッピング技術を、リンパ・ツボの座学から道具の扱い・実技まで1日で習得。他のサロンとの差別化に直結する、サロンの個性と稼働率を同時に高める一手。施術に必要な道具一式が受講料に含まれているので、受講当日からすぐに新メニューとして提供できます。</div>
+              <div class="menu-item-price">¥ <span>110,000</span></div>
+            </div>
+          </div>
+          <div class="menu-item" style="padding:0; overflow:hidden;">
+            <img src="images/ハンドリフレクソロジー講座.png" alt="オリジナルハンドリフレクソロジー講座" style="width:100%; height:auto; display:block;">
+            <div style="padding:1.5rem 1.8rem 1.8rem;">
+              <div style="display:flex; align-items:center; gap:0.4rem; margin-bottom:0.6rem; flex-wrap:wrap;">
+                <span style="display:inline-block; font-size:0.65rem; color:var(--gold); border:1px solid var(--gold); padding:0.15rem 0.6rem; letter-spacing:0.15em; font-family:var(--font-en-serif);">1 DAY</span>
+                <span style="display:inline-block; font-size:0.62rem; color:var(--gold-light); border:1px solid rgba(212,192,148,0.4); padding:0.15rem 0.55rem; letter-spacing:0.08em; font-family:var(--font-jp-sans); font-weight:300;">商材一式付き</span>
+              </div>
+              <div class="menu-item-name">オリジナルハンドリフレクソロジー講座</div>
+              <div class="menu-item-desc">「触れただけで、こんなに変わるんですか？」——手のひら・指先から肘下まで、反射区を丁寧にほぐすことで全身の緊張がじんわりほどけていく感覚に、お客様が思わず声を上げる人気メニュー。手の反射区・リンパの流れを座学でしっかり理解してから、実技でスムーズな施術手順を体感しながら習得。道具いらず・場所を選ばないため、サロン内でも出張先でもどこでも提供できる汎用性の高さも大きな魅力。施術に必要な商材一式が受講料に含まれているので、受講当日からすぐに新メニューとして始められます。</div>
+              <div class="menu-item-price">¥ <span>110,000</span></div>
+            </div>
+          </div>
+          <div class="menu-item" style="padding:0; overflow:hidden;">
+            <img src="images/リフレクソロジー講座.png" alt="オリジナルリフレクソロジー講座" style="width:100%; height:auto; display:block;">
+            <div style="padding:1.5rem 1.8rem 1.8rem;">
+              <div style="display:flex; align-items:center; gap:0.4rem; margin-bottom:0.6rem; flex-wrap:wrap;">
+                <span style="display:inline-block; font-size:0.65rem; color:var(--gold); border:1px solid var(--gold); padding:0.15rem 0.6rem; letter-spacing:0.15em; font-family:var(--font-en-serif);">1 DAY</span>
+                <span style="display:inline-block; font-size:0.62rem; color:var(--gold-light); border:1px solid rgba(212,192,148,0.4); padding:0.15rem 0.55rem; letter-spacing:0.08em; font-family:var(--font-jp-sans); font-weight:300;">商材一式付き</span>
+              </div>
+              <div class="menu-item-name">オリジナルリフレクソロジー講座</div>
+              <div class="menu-item-desc">「足を触るだけで全身が整う」——施術後の感動でリピーター続出の人気メニューを基礎から習得できる認定講座。足裏・ふくらはぎ・膝下全体の反射区と経絡を座学でしっかり理解し、圧の強さ・流れ・手技を実技で丁寧に習得。道具なしで提供できるため導入コストが低く、開業初期や出張サービスとの相性も抜群。施術に必要な商材一式が受講料に含まれているので、受講当日から新メニューとして自信を持って提供できます。</div>
+              <div class="menu-item-price">¥ <span>110,000</span></div>
+            </div>
+          </div>
+          <div class="menu-item" style="padding:0; overflow:hidden;">
+            <img src="images/小顔メソッド セルフエステレッスン.png" alt="小顔メソッド セルフエステレッスン" style="width:100%; height:auto; display:block;">
+            <div style="padding:1.5rem 1.8rem 1.8rem;">
+              <span class="menu-item-tag">体験レッスン</span>
+              <div class="menu-item-name">小顔メソッド セルフエステレッスン</div>
+              <div class="menu-item-desc">「え、これ自分でやったんですか？」——たった1時間で、自分の手がそのままエステマシンになる感覚を体験できる大人気レッスン。受講後すぐに小顔を実感する方が続出し、「毎朝の習慣になりました」という声も。マシンもコストも不要、鏡の前で毎日できるプロのホームケア技術を丁寧にお伝えします。本格的な認定講座への入口としてもおすすめの一歩です。</div>
+              <div class="menu-item-price">¥ <span>11,000</span></div>
+            </div>
+          </div>
+          <div class="menu-item" style="padding:0; overflow:hidden;">
+            <img src="images/艶人WAX脱毛ALL導入講座.png" alt="艶人WAX脱毛ALL導入講座" style="width:100%; height:auto; display:block;">
+            <div style="padding:1.5rem 1.8rem 1.8rem;">
+              <span class="menu-item-tag">2日間集中</span>
+              <div class="menu-item-name">艶人WAX脱毛ALL導入講座</div>
+              <div class="menu-item-desc">「ゼロから始めて、2日後にはプロの施術者へ」——全身WAX脱毛をまるごと習得できる、初心者向け完全パッケージ講座。理論・商品説明・カウンセリングから、ボディ・フェイシャル・ヒゲ・ブラジリアン・ホットパックまで脱毛に必要なすべてを2日間で網羅します。テキスト・カウンセリング資料・ディプロマがすべて受講料に含まれており、修了後すぐに本格WAX脱毛メニューをサロンに導入可能。需要拡大中の脱毛市場に、今すぐ参入するための最短ルートです。</div>
+              <div class="menu-item-price">¥ <span>198,000</span></div>
+              <p style="font-size:0.72rem; color:var(--text-muted); font-family:var(--font-jp-sans); font-weight:300; margin-top:0.5rem; line-height:1.8;">※ 施術に必要な商材は別途ご購入いただく必要があります。</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name">艶人WAX脱毛 各SETコース</div>
+            <div class="menu-item-desc">「WAXの基礎はある。でも、ここをもっと極めたい」——そんな方のために設計された、目的別5時間のSETコース。サロンの特性や強化したい部位に合わせて選べる全5コース展開。必要なスキルだけを短時間で集中習得できるため、既存メニューのクオリティアップや新部位の追加導入に最適です。</div>
+
+            <table style="width:100%; border-collapse:collapse; margin-top:1.2rem; font-family:var(--font-jp-sans); font-size:0.75rem;">
+              <thead>
+                <tr style="border-bottom:1px solid var(--border-gold);">
+                  <th style="text-align:left; padding:0.45rem 0.6rem; color:var(--gold); font-weight:400; letter-spacing:0.06em; white-space:nowrap;">コース</th>
+                  <th style="text-align:left; padding:0.45rem 0.6rem; color:var(--gold); font-weight:400; letter-spacing:0.06em;">内容</th>
+                  <th style="text-align:right; padding:0.45rem 0.6rem; color:var(--gold); font-weight:400; letter-spacing:0.06em; white-space:nowrap;">料金（税込）</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-bottom:1px solid rgba(212,192,148,0.1);">
+                  <td style="padding:0.45rem 0.6rem; color:var(--cream); white-space:nowrap;">眉毛・鼻毛・うなじ</td>
+                  <td style="padding:0.45rem 0.6rem; color:var(--text-secondary);">眉毛・鼻毛・うなじ・指毛・手の甲・耳毛</td>
+                  <td style="padding:0.45rem 0.6rem; color:var(--cream); text-align:right; white-space:nowrap;">¥60,500</td>
+                </tr>
+                <tr style="border-bottom:1px solid rgba(212,192,148,0.1);">
+                  <td style="padding:0.45rem 0.6rem; color:var(--cream); white-space:nowrap;">フェイシャル・鼻毛</td>
+                  <td style="padding:0.45rem 0.6rem; color:var(--text-secondary);">フェイシャル・鼻毛・フェイシャルホットパック</td>
+                  <td style="padding:0.45rem 0.6rem; color:var(--cream); text-align:right; white-space:nowrap;">¥71,500</td>
+                </tr>
+                <tr style="border-bottom:1px solid rgba(212,192,148,0.1);">
+                  <td style="padding:0.45rem 0.6rem; color:var(--cream); white-space:nowrap;">ヒゲ・鼻毛</td>
+                  <td style="padding:0.45rem 0.6rem; color:var(--text-secondary);">ヒゲ・鼻毛・フェイシャルホットパック</td>
+                  <td style="padding:0.45rem 0.6rem; color:var(--cream); text-align:right; white-space:nowrap;">¥71,500</td>
+                </tr>
+                <tr style="border-bottom:1px solid rgba(212,192,148,0.1);">
+                  <td style="padding:0.45rem 0.6rem; color:var(--cream); white-space:nowrap;">デコルテ・背中</td>
+                  <td style="padding:0.45rem 0.6rem; color:var(--text-secondary);">デコルテ・背中・うなじ・バストホットパック</td>
+                  <td style="padding:0.45rem 0.6rem; color:var(--cream); text-align:right; white-space:nowrap;">¥77,000</td>
+                </tr>
+                <tr>
+                  <td style="padding:0.45rem 0.6rem; color:var(--cream); white-space:nowrap;">ブラジリアン</td>
+                  <td style="padding:0.45rem 0.6rem; color:var(--text-secondary);">ブラジリアン（メンズ込み）・デリケートゾーンホットパック</td>
+                  <td style="padding:0.45rem 0.6rem; color:var(--cream); text-align:right; white-space:nowrap;">¥104,500</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="menu-item-price" style="margin-top:1.2rem;">¥ <span>60,500〜104,500</span></div>
+            <p style="font-size:0.72rem; color:var(--text-muted); font-family:var(--font-jp-sans); font-weight:300; margin-top:0.5rem; line-height:1.8;">※ 施術に必要な商材は別途ご購入いただく必要があります。</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name">艶人WAX脱毛 パーツ別講座</div>
+            <div class="menu-item-desc">「この部位だけ、確実にマスターしたい」——脚・腕・フェイシャル・VIO・ホットパックなど6部位から選べる、特化型5時間講座。1つの部位に絞って徹底的に技術を習得するから、受講後の施術クオリティが格段に上がります。特定部位への自信をつけたい方、新たに1メニューだけ追加したいサロンオーナーにも最適な一択です。</div>
+
+            <table style="width:100%; border-collapse:collapse; margin-top:1.2rem; font-family:var(--font-jp-sans); font-size:0.75rem;">
+              <thead>
+                <tr style="border-bottom:1px solid var(--border-gold);">
+                  <th style="text-align:left; padding:0.45rem 0.6rem; color:var(--gold); font-weight:400; letter-spacing:0.06em;">コース</th>
+                  <th style="text-align:right; padding:0.45rem 0.6rem; color:var(--gold); font-weight:400; letter-spacing:0.06em; white-space:nowrap;">料金（税込）</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-bottom:1px solid rgba(212,192,148,0.1);">
+                  <td style="padding:0.45rem 0.6rem; color:var(--text-secondary);">脚・腕・うなじ・脇</td>
+                  <td style="padding:0.45rem 0.6rem; color:var(--cream); text-align:right; white-space:nowrap;">¥55,000</td>
+                </tr>
+                <tr style="border-bottom:1px solid rgba(212,192,148,0.1);">
+                  <td style="padding:0.45rem 0.6rem; color:var(--text-secondary);">女性フェイシャル・鼻毛</td>
+                  <td style="padding:0.45rem 0.6rem; color:var(--cream); text-align:right; white-space:nowrap;">¥55,000</td>
+                </tr>
+                <tr style="border-bottom:1px solid rgba(212,192,148,0.1);">
+                  <td style="padding:0.45rem 0.6rem; color:var(--text-secondary);">男性ヒゲ・鼻毛</td>
+                  <td style="padding:0.45rem 0.6rem; color:var(--cream); text-align:right; white-space:nowrap;">¥55,000</td>
+                </tr>
+                <tr style="border-bottom:1px solid rgba(212,192,148,0.1);">
+                  <td style="padding:0.45rem 0.6rem; color:var(--text-secondary);">女性VIO</td>
+                  <td style="padding:0.45rem 0.6rem; color:var(--cream); text-align:right; white-space:nowrap;">¥55,000</td>
+                </tr>
+                <tr style="border-bottom:1px solid rgba(212,192,148,0.1);">
+                  <td style="padding:0.45rem 0.6rem; color:var(--text-secondary);">男性VIO</td>
+                  <td style="padding:0.45rem 0.6rem; color:var(--cream); text-align:right; white-space:nowrap;">¥55,000</td>
+                </tr>
+                <tr>
+                  <td style="padding:0.45rem 0.6rem; color:var(--text-secondary);">フェイシャル・かかと・VIO・バスト</td>
+                  <td style="padding:0.45rem 0.6rem; color:var(--cream); text-align:right; white-space:nowrap;">¥55,000</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="menu-item-price" style="margin-top:1.2rem;">¥ <span>55,000</span>（全コース一律）</div>
+            <p style="font-size:0.72rem; color:var(--text-muted); font-family:var(--font-jp-sans); font-weight:300; margin-top:0.5rem; line-height:1.8;">※ 施術に必要な商材は別途ご購入いただく必要があります。</p>
+          </div>
+        </div>
+
+        <p class="menu-note">
+          ※ 表示価格は全て税込です。<br>
+          ※ 各講座は少人数制またはマンツーマンで行います。未経験の方も安心してご受講いただけます。<br>
+          ※ 修了後はディプロマ（認定証）を発行。サロンのメニューにそのままご活用いただけます。<br>
+          ※ 受講後のフォローアップ・開業相談・副業相談も承っております。<br>
+          ※ サロン開業に向けたコンサルティングも可能です。まずはLINEにてお気軽にご相談ください。
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="bg-medium" style="padding: 5rem 2rem; text-align: center;">
+    <div class="section-inner">
+      <div class="fade-in">
+        <span class="section-tag">Reservation</span>
+        <h2 class="section-title" style="margin-bottom:1rem;">ご予約・お問い合わせ</h2>
+        <p class="section-subtitle" style="margin-top:0; margin-bottom:3rem;">
+          料金・コースのご相談はLINEまたはフォームよりお気軽にどうぞ。<br>
+          無料カウンセリングも承っております。
+        </p>
+        <div class="sns-links">
+          <a href="https://line.me/ti/p/@snn9506v" class="sns-link" target="_blank" rel="noopener">
+            LINE で予約・相談
+          </a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfiTeY6coS5xLp5Zf1o92QB1NUmzGNv9Fzl4UUfUg1ZlBwT3A/viewform?usp=header" class="sns-link" target="_blank" rel="noopener">
+            お問い合わせフォーム
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-logo">Re美力Labo Infinity</div>
+      <div class="footer-logo-sub">Wellcierge — Beauty &amp; Wellness Specialist</div>
+      <nav class="footer-nav">
+        <a href="index.html">Top</a>
+        <a href="about.html">About</a>
+        <a href="menu.html">Menu</a>
+        <a href="wellcierge.html">Wellcierge</a>
+        <a href="news.html">News</a>
+        <a href="access.html">Access</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+      <div class="footer-info">
+        〒674-0065 兵庫県明石市大久保町西島<br>
+        営業時間 10:00〜20:00（不定休）<br>
+        LINE: @snn9506v ／ rebiryokulabo.infinity@gmail.com
+      </div>
+      <div class="footer-copy">
+        &copy; 2026 Re美力Labo Infinity. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <div id="google_translate_element" style="display:none;"></div>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script src="js/news-data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // URLハッシュに応じてタブを切り替える
+    const hash = window.location.hash;
+    if (hash === '#saloncar' || hash === '#salonpanel') {
+      document.querySelector('[data-tab="saloncar"]')?.click();
+    } else if (hash === '#school') {
+      document.querySelector('[data-tab="school"]')?.click();
+    }
+  </script>
+</body>
+</html>
