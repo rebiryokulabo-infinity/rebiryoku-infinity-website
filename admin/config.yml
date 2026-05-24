@@ -24,4 +24,4 @@ collections:
               - {label: 日付, name: date, widget: string, hint: "例：2026.05.24（年.月.日の形式で入力）"}
               - {label: カテゴリ, name: category, widget: select, options: ["お知らせ", "ブログ", "キャンペーン", "スクール情報"]}
               - {label: 本文, name: body, widget: text}
-              - {label: 画像（任意）, name: image, widget: string, required: false, hint: "画像を使う場合はパスを入力（例：images/news01.jpg）。不要な場合は空欄でOK"}
+              - {label: 画像（任意）, name: image, widget: image, required: false, allow_multiple: false, hint: "不要な場合は空欄でOK"}
