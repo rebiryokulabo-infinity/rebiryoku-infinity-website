@@ -1744,6 +1744,23 @@ section {
     display: flex;
   }
 
+  .logo-main {
+    font-size: 0.88rem;
+    letter-spacing: 0.06em;
+  }
+
+  .logo-sub {
+    display: none;
+  }
+
+  .scroll-indicator {
+    display: none;
+  }
+
+  .hero-content {
+    padding-top: calc(var(--nav-height) + 1rem);
+  }
+
   .concept-grid {
     grid-template-columns: 1fr;
     gap: 3rem;
