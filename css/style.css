@@ -1763,8 +1763,19 @@ section {
     display: none;
   }
 
+  .hero {
+    height: auto;
+    min-height: 100svh;
+    overflow: visible;
+  }
+
   .hero-content {
     padding-top: calc(var(--nav-height) + 1rem);
+    padding-bottom: 3rem;
+  }
+
+  .map-wrap {
+    aspect-ratio: 1/1;
   }
 
   .concept-grid {
