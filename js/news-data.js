@@ -65,9 +65,9 @@ const SITE_INFO = {
   hours: "10:00 〜 20:00（不定休）",
   hoursNote: "営業時間外も応相談",
   lineId: "@snn9506v",
-  lineUrl: "https://line.me/ti/p/@snn9506v",
+  lineUrl: "https://lin.ee/R1osLt2",
   email: "rebiryokulabo.infinity@gmail.com",
-  nearestStation: "山陽電鉄西江井島駅より徒歩約5分／ JR魚住駅より車で約5分／JR大久保駅より車で約8分",
+  nearestStation: "西江井ヶ島駅（詳しい場所はご予約時にご案内します）",
   parking: "完備　お車でお越しの方はご連絡ください",
   copyrightYear: "2026",
 };
