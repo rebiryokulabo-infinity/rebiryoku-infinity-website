@@ -326,3 +326,17 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+
+// ===================================
+// LINE・問い合わせボタンのクリック計測（GA4）
+// ===================================
+document.addEventListener('click', (e) => {
+  const link = e.target.closest('a[href]');
+  if (!link || typeof gtag !== 'function') return;
+  const href = link.href;
+  if (href.includes('lin.ee') || href.includes('line.me')) {
+    gtag('event', 'line_click', { link_url: href, page_path: location.pathname });
+  } else if (href.includes('docs.google.com/forms')) {
+    gtag('event', 'form_click', { link_url: href, page_path: location.pathname });
+  }
+});
