@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+
+Sitemap: https://rebiryokulabo-infinity-salon.netlify.app/sitemap.xml
